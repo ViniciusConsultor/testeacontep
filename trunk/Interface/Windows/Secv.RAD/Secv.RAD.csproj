@@ -1,0 +1,261 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{72627C98-1EC7-46D7-BC13-DB9DDA2BF613}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Secv.RAD</RootNamespace>
+    <AssemblyName>Secv.RAD</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Francisco|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Francisco\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Chico|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Chico\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Acontep, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Acontep.dll</HintPath>
+    </Reference>
+    <Reference Include="Secv.Ng.Manutencao.Rad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Secv.Ng.Manutencao.Rad.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WPC.Common.EDI.EDIObjects, Version=1.0.1798.15524, Culture=neutral" />
+    <Reference Include="WPC.Common.EDI.EDIProcessors.EDIPreProcessor, Version=1.0.1798.15523, Culture=neutral" />
+    <Reference Include="WPC.Common.EDI.EDIRegex, Version=1.0.1798.15523, Culture=neutral" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppUtil.cs" />
+    <Compile Include="Controles\RichTextBoxEditor\Editor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controles\RichTextBoxEditor\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracoes.Designer.cs">
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExecutarSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExecutarSQL.Designer.cs">
+      <DependentUpon>frmExecutarSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPropriedadesListaSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPropriedadesListaSQL.Designer.cs">
+      <DependentUpon>frmPropriedadesListaSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeradorSECV.cs" />
+    <Compile Include="GeradorCRUD.cs" />
+    <Compile Include="GerarCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerarCRUD.Designer.cs">
+      <DependentUpon>GerarCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerarMetodoViaSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerarMetodoViaSQL.Designer.cs">
+      <DependentUpon>GerarMetodoViaSQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerarFachadaNegocio.cs" />
+    <Compile Include="OpcoesCRUD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OpcoesCRUD.Designer.cs">
+      <DependentUpon>OpcoesCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controles\RichTextBoxEditor\Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controles\RichTextBoxEditor\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAbout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfiguracoes.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExecutarSQL.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmExecutarSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPropriedadesListaSQL.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPropriedadesListaSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerarCRUD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GerarCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerarMetodoViaSQL.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GerarMetodoViaSQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpcoesCRUD.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OpcoesCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TypeConvertor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adicionar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini cross.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini cross.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hardware - Gears.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hardware - Play This.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus cross.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus cross.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rond.fv-b.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\avancar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SECV TI.jpg" />
+    <Content Include="Controles\RichTextBoxEditor\WPC.Common.EDI.EDIEditControl.xml" />
+    <Content Include="Controles\RichTextBoxEditor\WPC.Common.EDI.EDIObjects.dll" />
+    <Content Include="Controles\RichTextBoxEditor\WPC.Common.EDI.EDIProcessors.EDIPreProcessor.dll" />
+    <Content Include="Controles\RichTextBoxEditor\WPC.Common.EDI.EDIRegex.dll" />
+    <Content Include="Controles\RichTextBoxEditor\WPC.OpenSource.EDIEditControl.xml" />
+    <None Include="Resources\Note1.ico" />
+    <None Include="Resources\ParaBaixo.png" />
+    <None Include="Resources\ParaCima.png" />
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
