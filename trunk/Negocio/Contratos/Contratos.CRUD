@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<EstruturaSaveRAD xmlns="http://tempuri.org/EstruturaSaveRAD.xsd">
+  <ClasseCRUD>
+    <ID>fa6cd7c6-beee-4dd1-9dd8-22a61f26ce90</ID>
+    <Tabela>Contratos.Area</Tabela>
+    <NomeClasse>AreaAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=FRANCISCONB\SQLEXPRESS;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>d94e331a-7931-4369-ad10-171d91ca7c3d</ID>
+    <Tabela>Contratos.Emenda</Tabela>
+    <NomeClasse>EmendaAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=FRANCISCONB\SQLEXPRESS;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>ac04170f-788c-41a4-bd81-bb9bba17622e</ID>
+    <Tabela>Contratos.Empreiteira</Tabela>
+    <NomeClasse>EmpreiteiraAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=FRANCISCONB\SQLEXPRESS;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>58adad0c-df85-4ca7-9cf3-20a47d5b3b51</ID>
+    <Tabela>Contratos.TipoRealizacao</Tabela>
+    <NomeClasse>TipoRealizacaoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=FRANCISCONB\SQLEXPRESS;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD</NameSpace>
+  </ClasseCRUD>
+  <Versao>
+    <Numero>1.2.2.1</Numero>
+    <Usuario>FRANCISCONB\Chico</Usuario>
+    <Maquina>FRANCISCONB</Maquina>
+    <Data>2007-03-21T00:34:18.703125-03:00</Data>
+  </Versao>
+</EstruturaSaveRAD>
