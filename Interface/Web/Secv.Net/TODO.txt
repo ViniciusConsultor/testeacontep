@@ -1,0 +1,37 @@
+.Ao autenticar:
+	SetAuthCookie()
+	if (GetRedirectUrl() == <url de algum modulo que aparece no menu>)
+		Redirect(GetRedirectUrl());
+	else
+		Redirect("~/Default.aspx");
+.Estado
+	.Session
+	.ViewState e os proprios server controls
+	.Valores customizados no view state
+
+.Navegacao
+	.Cross-Page Posting (forte tendencia de gerar dependencia com a pagina anterior)
+	    PostBackUrl       // html attribute presente em Button, LinkButton, ImageButton, etc.
+	    this.PreviousPage // propriedade com a pagina de origem na pagina de destino)
+	    <% PreviousPageType VirtualPath="<nome_arq_aspx>" %>
+	.QueryString (informacao claramente visivel para o usuario, importante garantir que os dados vao estar sendo verificados na pagina de destino em relacao a seguranca)
+	.Cookie (sem comentarios)
+	.Sessao (otima opcao se realmente necessario diante de outras opcoes)
+	.HttpContext (excelente para substituir QueryString depende do uso de Server.Transfer ou Response.Redirect ainda nao definido)
+	
+.Testar post-back com janelas aberta como modal (nao funciona bem no 1.0)
+.Session.Timeout = 60 (para o modulo de veiculo por exemplo. Verificar como funciona exatamente)
+.Testar deployment
+.Exception orfao (camada de apresentacao) e log (camada de aplicacao)
+.Server.Transfer ou Response.Redirect (o segundo eh necessario para alguns casos. Entender quais e porque)
+.Propriedades DefaultFocus e DefaultButton da tag form
+.DefaultButton o componente alvo precisa implementar IButtonControl
+.Integrar NTLM/Digest/Basis com FormsAuthentication
+.Porque nao esta sendo criado a base aspnetdb.mdf automaticamente? (curiosidade)
+.Configurar custom errors do IIS para outros casos nao atendidos pelo ASP.NET (um html foi requisitado e nao existe por exemplo)
+.Segurancao de aplicacao com as dll's executando dentro do dominio IIS. Como conciliar acesso restrito com necessidades de impersonificacao
+.Criar script de pesquisa em componente html select e criar funcao para injetar esse script na pagina
+.Tela confirmacao de atualizacao
+.Criar template para classe marcada com [Serializable]
+.HttpModule para verificar autorizacao eliminando necessidade de dependencia com classe base.
+.Funcoes para redirecionar baseado em codigo do sistema/modulo/funcao e modulo/funcao
