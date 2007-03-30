@@ -1,0 +1,14 @@
+Versão [1.0.0.1] - 2006-08-30
+Autor: Francisco Rodrigues
+	
+Add
+	- Atalhos para as chamadas de tela;
+	- Caminho padrão para abrir e salvar arquivos;
+	- Chaves para personalizar as configurações;
+	- Exibição da versão utilizada;
+Fixed
+	- Criação/abertura de um arquivo já existente.
+	- Corrigido a escolha do nome (usar o default ou o informado pelo usuário) para os métodos de insert, update, select, delete.
+	- Bug que deixava os metodos padrões (I/U/S/D) quando dava um erro no momento da geração do código;	
+		
+	
