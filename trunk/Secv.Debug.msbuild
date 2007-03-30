@@ -1,0 +1,6 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="Build"> 
+    <!-- Clean, then rebuild entire solution -->
+    <MSBuild Projects="Secv.Build.sln" Targets="Clean;Rebuild" Properties="Configuration=Debug"/>   
+  </Target>
+</Project>
