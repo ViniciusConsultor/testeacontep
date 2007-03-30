@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CadeiaAutorizacaoDataSet" targetNamespace="http://tempuri.org/CadeiaAutorizacaoDataSet.xsd" xmlns:mstns="http://tempuri.org/CadeiaAutorizacaoDataSet.xsd" xmlns="http://tempuri.org/CadeiaAutorizacaoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CadeiaAutorizacaoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CadeiaAutorizacaoDataSet" msprop:Generator_DataSetName="CadeiaAutorizacaoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ParemetroFuncaoHierarquia" msprop:Generator_UserTableName="ParemetroFuncaoHierarquia" msprop:Generator_RowDeletedName="ParemetroFuncaoHierarquiaRowDeleted" msprop:Generator_RowChangedName="ParemetroFuncaoHierarquiaRowChanged" msprop:Generator_RowClassName="ParemetroFuncaoHierarquiaRow" msprop:Generator_RowChangingName="ParemetroFuncaoHierarquiaRowChanging" msprop:Generator_RowEvArgName="ParemetroFuncaoHierarquiaRowChangeEvent" msprop:Generator_RowEvHandlerName="ParemetroFuncaoHierarquiaRowChangeEventHandler" msprop:Generator_TableClassName="ParemetroFuncaoHierarquiaDataTable" msprop:Generator_TableVarName="tableParemetroFuncaoHierarquia" msprop:Generator_RowDeletingName="ParemetroFuncaoHierarquiaRowDeleting" msprop:Generator_TablePropName="ParemetroFuncaoHierarquia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nome" msprop:Generator_UserColumnName="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" type="xs:string" />
+              <xs:element name="valor" msprop:Generator_UserColumnName="valor" msprop:Generator_ColumnVarNameInTable="columnvalor" msprop:Generator_ColumnPropNameInRow="valor" msprop:Generator_ColumnPropNameInTable="valorColumn" type="xs:anyType" minOccurs="0" />
+              <xs:element name="tipo" msprop:Generator_UserColumnName="tipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="tamanho" msprop:Generator_UserColumnName="tamanho" msprop:Generator_ColumnPropNameInRow="tamanho" msprop:Generator_ColumnVarNameInTable="columntamanho" msprop:Generator_ColumnPropNameInTable="tamanhoColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="ParemetroFuncaoHierarquiaKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ParemetroFuncaoHierarquia" />
+      <xs:field xpath="mstns:nome" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
