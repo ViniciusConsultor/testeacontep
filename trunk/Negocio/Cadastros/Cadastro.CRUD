@@ -1,0 +1,153 @@
+<?xml version="1.0" standalone="yes"?>
+<EstruturaSaveRAD xmlns="http://tempuri.org/EstruturaSaveRAD.xsd">
+  <ClasseCRUD>
+    <ID>364c80f8-c2b2-4bb0-a67a-fd8ac30b73bc</ID>
+    <Tabela>dbo.Pais</Tabela>
+    <NomeClasse>PaisAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>3e14366f-0f97-40c4-b8ac-b8927030436f</ID>
+    <Tabela>dbo.TBMUNICIPIO</Tabela>
+    <NomeClasse>TBMunicipioAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>3798a6bf-7a15-4332-bf20-77c493559590</ID>
+    <Tabela>dbo.TBBairro</Tabela>
+    <NomeClasse>TBBairroAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>923ee8d0-e323-4df9-9b9d-f7f91055f1b8</ID>
+    <Tabela>dbo.TBTIPOLOGRADOURO</Tabela>
+    <NomeClasse>TBTipoLogradouroAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>9eac9c2d-92b2-4787-afac-d0a8b2ae0c4d</ID>
+    <Tabela>dbo.TbUniFed</Tabela>
+    <NomeClasse>TbUniFedAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>f820afaa-ccd8-48df-9667-3d30365aeeab</ID>
+    <Tabela>dbo.COMPANHIA</Tabela>
+    <NomeClasse>CompanhiaAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>eb79cde8-3b57-4ccb-920e-c827ecf9b12a</ID>
+    <Tabela>dbo.PLANTA</Tabela>
+    <NomeClasse>PlantaAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>046a72af-a4e9-47a3-81da-82b743e472d6</ID>
+    <Tabela>dbo.FUNCAOCONTATO</Tabela>
+    <NomeClasse>FuncaoContatoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>9c8af911-6f46-4dfd-b0fa-c9906d6d87c2</ID>
+    <Tabela>dbo.ENDERECO</Tabela>
+    <NomeClasse>EnderecoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>38b1c7d2-0bae-432a-aa36-33f3bb5ddd40</ID>
+    <Tabela>dbo.CONTATO</Tabela>
+    <NomeClasse>ContatoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>8ae1f43c-c7dc-4e58-b500-dcb1650bc30d</ID>
+    <Tabela>dbo.TABELAPRECO</Tabela>
+    <NomeClasse>TabelaPrecoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>c68754e5-2229-4824-822b-8598cac48adf</ID>
+    <Tabela>dbo.CanalBP</Tabela>
+    <NomeClasse>CanalBPAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>23aa9fb6-4285-4db2-abe5-475635393768</ID>
+    <Tabela>dbo.ParceriaBP</Tabela>
+    <NomeClasse>ParceriaBPAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>3742c7d2-4b50-4e7f-b237-de21adfeefb0</ID>
+    <Tabela>dbo.Funcionario</Tabela>
+    <NomeClasse>FuncionarioAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>7b93991f-d556-4cb3-8eb8-56367d51b7c6</ID>
+    <Tabela>dbo.PARAMETROS</Tabela>
+    <NomeClasse>ParametrosAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>0fbc0b90-94d6-4e65-9f63-501ecbda7835</ID>
+    <Tabela>dbo.Planta</Tabela>
+    <NomeClasse>PlantaAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>9e96eb2f-2209-4289-8df1-eeff1979bf9b</ID>
+    <Tabela>Cadastros.Banco</Tabela>
+    <NomeClasse>BancoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>efb7c1e4-f4ca-4539-8582-5bb32e05af84</ID>
+    <Tabela>Cadastros.Agencias</Tabela>
+    <NomeClasse>AgenciasAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=Centraldev;Initial Catalog=SisSecvTeste; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Secv.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <Versao>
+    <Numero>1.1.4.2</Numero>
+    <Usuario>CENTRAL\francisco</Usuario>
+    <Maquina>INFOAJU05PC</Maquina>
+    <Data>2007-01-05T16:26:46.3891713-03:00</Data>
+  </Versao>
+</EstruturaSaveRAD>
