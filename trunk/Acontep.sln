@@ -1,27 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/Secv.Netv2/", "http://localhost/Secv.Netv2", "{2652255B-197F-45F5-B357-97569AEC6ED4}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "http://localhost/Acontep.Net/", "http://localhost/Acontep.Net", "{2652255B-197F-45F5-B357-97569AEC6ED4}"
 	ProjectSection(WebsiteProperties) = preProject
 		ProjectReferences = "{D7529559-29C8-4623-AC50-75C6E61E6D42}|Secv.Manutencao.dll;{F63BD03D-C693-4912-96F5-6EA11962E6BA}|Secv.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/Secv.Netv2"
-		Debug.AspNetCompiler.PhysicalPath = "Interface\Web\Secv.Net\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Secv.Netv2\"
+		Debug.AspNetCompiler.VirtualPath = "/Acontep.Net"
+		Debug.AspNetCompiler.PhysicalPath = "Interface\Web\Acontep.Net\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Acontep.Net\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/Secv.Netv2"
-		Release.AspNetCompiler.PhysicalPath = "Interface\Web\Secv.Net\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Secv.Netv2\"
+		Release.AspNetCompiler.VirtualPath = "/Acontep.Net"
+		Release.AspNetCompiler.PhysicalPath = "Interface\Web\Acontep.Net\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Acontep.Net\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "Interface\Web\Secv.Net\"
+		SlnRelativePath = "Interface\Web\Acontep.Net\"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Secv", "Secv\Secv.csproj", "{F63BD03D-C693-4912-96F5-6EA11962E6BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acontep", "Acontep\Acontep.csproj", "{F63BD03D-C693-4912-96F5-6EA11962E6BA}"
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
