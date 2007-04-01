@@ -220,32 +220,32 @@
             <EditItemTemplate>
                 <table style="width: 100%">
                     <tr>
-                        <td style="width: 20%">
+                        <td style="width: 66px">
                             Número :</td>
                         <td style="width: 80%">
                             <asp:TextBox ID="tbxNumero" runat="server" Text='<%# Bind("Numero") %>'></asp:TextBox></td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="width: 66px">
                             N° Funcional:</td>
                         <td>
                             <ew:MaskedTextBox ID="tbxNumeroFuncional" runat="server" Mask="99.999.9999.9999.9999"
                                 Text='<%# Bind("NumeroFuncional") %>'></ew:MaskedTextBox></td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="width: 66px">
                             Valor:</td>
                         <td>
                             <ew:NumericBox ID="tbxValor" runat="server" SkinID="Valor" Text='<%# Bind("Valor") %>'></ew:NumericBox></td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="width: 66px">
                             Autor:</td>
                         <td>
                             <asp:TextBox ID="tbxAutor" runat="server" Text='<%# Bind("Autor") %>'></asp:TextBox></td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="width: 66px">
                             Área:</td>
                         <td>
                             <asp:DropDownList ID="ddlArea" runat="server" AppendDataBoundItems="True" DataSourceID="odsArea"
@@ -259,7 +259,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="width: 66px">
                             Tipo de realização:</td>
                         <td>
                             <asp:DropDownList ID="ddlTipoRealizacao" runat="server" AppendDataBoundItems="True"
@@ -274,12 +274,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="width: 66px">
                             Estado:</td>
                         <td>
                             <asp:DropDownList ID="ddlEstado" runat="server" AppendDataBoundItems="True"
                                     DataSourceID="odsEstado" DataTextField="Nome" DataValueField="IDEstado"
-                                    OnDataBinding="TextoNenumItemInformado" SelectedValue='<%# Bind("IDEstado") %>' AutoPostBack="True">
+                                    OnDataBinding="TextoNenumItemInformado" SelectedValue='<%# Eval("IDEstado") %>' AutoPostBack="True">
                             </asp:DropDownList><asp:ObjectDataSource ID="odsEstado" runat="server" OldValuesParameterFormatString="original_{0}"
                                 SelectMethod="ObterPor_UQ_Nome" TypeName="Acontep.AD.Cadastros.EstadoAD">
                                 <SelectParameters>
@@ -289,12 +289,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td style="width: 66px">
                             Cidade:</td>
                         <td>
                             <asp:DropDownList ID="ddlCidade" runat="server" AppendDataBoundItems="True"
                                     DataSourceID="odsCidade" DataTextField="Nome" DataValueField="IDCidade"
-                                    OnDataBinding="TextoNenumItemInformado">
+                                    OnDataBinding="TextoNenumItemInformado" OnDataBound="ddlCidade_DataBound" OnSelectedIndexChanged="ddlCidade_SelectedIndexChanged">
                             </asp:DropDownList><asp:ObjectDataSource ID="odsCidade" runat="server" OldValuesParameterFormatString="original_{0}"
                                 SelectMethod="ObterPor_IX_Municipio" TypeName="Acontep.AD.Cadastros.MunicipioAD">
                                 <SelectParameters>
@@ -316,7 +316,7 @@
         <asp:ObjectDataSource ID="odsItem" runat="server" DeleteMethod="Apagar" InsertMethod="Inserir"
             OldValuesParameterFormatString="original_{0}" OnInserted="odsItem_Updated" OnInserting="odsManutencao_Inserting"
             OnUpdated="odsItem_Updated" OnUpdating="odsManutencao_Inserting" SelectMethod="ObterEmenda"
-            TypeName="Acontep.AD.Contratos.EmendaAD" UpdateMethod="Alterar">
+            TypeName="Acontep.AD.Contratos.EmendaAD" UpdateMethod="Alterar" OnSelected="odsItem_Selected">
             <DeleteParameters>
                 <asp:Parameter Name="original_IDEmenda" Type="Int32" />
             </DeleteParameters>

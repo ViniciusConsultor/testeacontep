@@ -48,7 +48,12 @@ public partial class Sistema_Contratos_Cadastros_EmendaForm : System.Web.UI.Page
     protected void btnExcluir_Click(object sender, EventArgs e)
     {
         HabilitarMantutencao(FormViewMode.ReadOnly);
-        
+        if (gvwEmenda.SelectedDataKey != null)
+        {
+            odsEmenda.DeleteParameters[0].DefaultValue = gvwEmenda.SelectedDataKey.Value.ToString();
+            odsEmenda.Delete();
+            DadosWeb.AtribuirMensagem(MensagemWeb.MensagemInclusaoSucesso);
+        }
         btnPesquisar_Click(sender, e);
 
     }
@@ -83,5 +88,19 @@ public partial class Sistema_Contratos_Cadastros_EmendaForm : System.Web.UI.Page
         this.HabilitarMantutencao(FormViewMode.ReadOnly);
         DadosWeb.AtribuirMensagem(MensagemWeb.MensagemInclusaoSucesso);
         btnPesquisar_Click(sender, e);
+    }
+    protected void ddlCidade_DataBound(object sender, EventArgs e)
+    {
+        ((DropDownList)sender).SelectedValue = IDCidade;
+    }
+    string IDCidade = String.Empty;
+    protected void odsItem_Selected(object sender, ObjectDataSourceStatusEventArgs e)
+    {
+        if (e.ReturnValue != null && ((DataTable)e.ReturnValue).Rows.Count > 0)
+            IDCidade = ((DataTable)e.ReturnValue).Rows[0]["IDCidade"].ToString();
+    }
+    protected void ddlCidade_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
 }
