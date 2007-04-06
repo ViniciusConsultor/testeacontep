@@ -24,6 +24,13 @@ namespace Acontep.UI.Web
                 return new MensagemWeb("Registro incluído com sucesso.", Tipo.Sucesso);
             }
         }
+        public static MensagemWeb MensagemSelecioneItem
+        {
+            get
+            {
+                return new MensagemWeb("Por favor, selecione um item.", Tipo.Aviso);
+            }
+        }
         public static MensagemWeb MensagemAlteradoSucesso
         {
             get

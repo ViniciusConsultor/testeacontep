@@ -10,6 +10,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using Acontep.Manutencao.Seguranca;
 using Acontep.UI.Web;
+using Acontep;
 
 public partial class Sistema_Contratos_Cadastros_EmendaForm : System.Web.UI.Page
 {
@@ -20,6 +21,13 @@ public partial class Sistema_Contratos_Cadastros_EmendaForm : System.Web.UI.Page
             return ConfigurationManager.AppSettings["IDEstadoPadrao"]; 
         }
     }
+    private void HabilitarMantutencao(FormViewMode formViewMode)
+    {
+        pnlAlteracao.Visible = formViewMode != FormViewMode.ReadOnly;
+        pnlGeralEmendas.Visible = formViewMode == FormViewMode.ReadOnly;
+        fvwItem.ChangeMode(formViewMode);
+    }
+
     protected void Page_PreInit(object sender, EventArgs e)
     {
         Permissao.ConfigAcessoFuncao("1");
@@ -33,13 +41,7 @@ public partial class Sistema_Contratos_Cadastros_EmendaForm : System.Web.UI.Page
         HabilitarMantutencao(FormViewMode.Insert);
     }
 
-    private void HabilitarMantutencao(FormViewMode formViewMode)
-    {
-        pnlAlteracao.Visible = formViewMode != FormViewMode.ReadOnly;
-        pnlGeralEmendas.Visible = formViewMode == FormViewMode.ReadOnly;
-        fvwItem.ChangeMode(formViewMode);
-    }
-
+    
     protected void btnAlterar_Click(object sender, EventArgs e)
     {
         HabilitarMantutencao(FormViewMode.Edit);
@@ -52,7 +54,7 @@ public partial class Sistema_Contratos_Cadastros_EmendaForm : System.Web.UI.Page
         {
             odsEmenda.DeleteParameters[0].DefaultValue = gvwEmenda.SelectedDataKey.Value.ToString();
             odsEmenda.Delete();
-            DadosWeb.AtribuirMensagem(MensagemWeb.MensagemInclusaoSucesso);
+            DadosWeb.AtribuirMensagem(MensagemWeb.MensagemExclusaoSucesso);
         }
         btnPesquisar_Click(sender, e);
 

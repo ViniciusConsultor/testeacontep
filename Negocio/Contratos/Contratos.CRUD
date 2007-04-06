@@ -1,41 +1,35 @@
 <?xml version="1.0" standalone="yes"?>
 <EstruturaSaveRAD xmlns="http://tempuri.org/EstruturaSaveRAD.xsd">
   <ClasseCRUD>
-    <ID>fa6cd7c6-beee-4dd1-9dd8-22a61f26ce90</ID>
+    <ID>ce8d4585-1147-42b4-be28-fb8b8dc436bc</ID>
     <Tabela>Contratos.Area</Tabela>
     <NomeClasse>AreaAD</NomeClasse>
     <Provider>System.Data.SqlClient</Provider>
-    <StringConexao>Data Source=FRANCISCONB\SQLEXPRESS;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
-    <NameSpace>Acontep.AD</NameSpace>
+    <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD.Contratos</NameSpace>
   </ClasseCRUD>
   <ClasseCRUD>
-    <ID>d94e331a-7931-4369-ad10-171d91ca7c3d</ID>
+    <ID>f45e04b5-ad00-4d74-a192-32e94e75326a</ID>
     <Tabela>Contratos.Emenda</Tabela>
     <NomeClasse>EmendaAD</NomeClasse>
     <Provider>System.Data.SqlClient</Provider>
-    <StringConexao>Data Source=FRANCISCONB\SQLEXPRESS;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
-    <NameSpace>Acontep.AD</NameSpace>
+    <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD.Contratos</NameSpace>
   </ClasseCRUD>
   <ClasseCRUD>
-    <ID>ac04170f-788c-41a4-bd81-bb9bba17622e</ID>
+    <ID>8a662370-c668-4ced-a267-16a9b8604f0e</ID>
     <Tabela>Contratos.Empreiteira</Tabela>
     <NomeClasse>EmpreiteiraAD</NomeClasse>
     <Provider>System.Data.SqlClient</Provider>
-    <StringConexao>Data Source=FRANCISCONB\SQLEXPRESS;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
-    <NameSpace>Acontep.AD</NameSpace>
+    <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD.Contratos</NameSpace>
   </ClasseCRUD>
   <ClasseCRUD>
-    <ID>58adad0c-df85-4ca7-9cf3-20a47d5b3b51</ID>
+    <ID>2c28ad6a-1f07-469e-bc48-fc03e0d6ade5</ID>
     <Tabela>Contratos.TipoRealizacao</Tabela>
     <NomeClasse>TipoRealizacaoAD</NomeClasse>
     <Provider>System.Data.SqlClient</Provider>
-    <StringConexao>Data Source=FRANCISCONB\SQLEXPRESS;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
-    <NameSpace>Acontep.AD</NameSpace>
+    <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD.Contratos</NameSpace>
   </ClasseCRUD>
-  <Versao>
-    <Numero>1.2.2.1</Numero>
-    <Usuario>FRANCISCONB\Chico</Usuario>
-    <Maquina>FRANCISCONB</Maquina>
-    <Data>2007-03-21T00:34:18.703125-03:00</Data>
-  </Versao>
 </EstruturaSaveRAD>
