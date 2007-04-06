@@ -96,6 +96,7 @@ Default skin template. The following skins are provided as examples only.
 <asp:BulletedList runat="server" BulletStyle="CustomImage" />
 
 <asp:RequiredFieldValidator runat="server" Text="*" Font-Size="Large" Font-Bold="True" ForeColor="Red"/>
+<asp:RequiredFieldValidator  SkinID="CampoObrigatorio" runat="server" Text="*" Font-Bold="True" ForeColor="Red" ToolTip="Campo obrigatório" />
 <asp:RangeValidator runat="server" Text="*" Font-Size="Larger" Font-Bold="True" ForeColor="Red"/>
 <asp:RegularExpressionValidator runat="server" Font-Size="Larger" Text="*" Font-Bold="True" ForeColor="Red"/>
 <asp:CompareValidator runat="server" Text="*" Font-Size="Larger" Font-Bold="True" ForeColor="Red"/>

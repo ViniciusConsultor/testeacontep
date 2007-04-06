@@ -39,7 +39,7 @@ namespace Acontep {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Acontep.ErroResource", typeof(ErroResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Secv.ErroResource", typeof(ErroResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
