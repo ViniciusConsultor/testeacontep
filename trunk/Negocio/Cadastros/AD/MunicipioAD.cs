@@ -13,14 +13,10 @@ namespace Acontep.AD.Cadastros
         {
             string sql = @"
 SELECT 
-	IDCidade, 
 	E.IDEstado, 
-	Sigla + ' - '+ M.Nome as Nome,
+	Sigla + ' - '+ M.Nome as NomeSigla,
     E.Nome as Estado,
-	M.DATINC, 
-	M.DATHOR, 
-	M.USUINC, 
-	M.USUTRA 
+	M.*
 FROM 
 	Cadastros.Municipio M
     JOIN Cadastros.Estado E on E.IDEstado = M.IDEstado

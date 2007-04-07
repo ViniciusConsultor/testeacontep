@@ -88,7 +88,7 @@ public partial class Sistema_Contratos_Cadastros_EmendaForm : System.Web.UI.Page
     protected void odsItem_Updated(object sender, ObjectDataSourceStatusEventArgs e)
     {
         this.HabilitarMantutencao(FormViewMode.ReadOnly);
-        DadosWeb.AtribuirMensagem(MensagemWeb.MensagemInclusaoSucesso);
+        DadosWeb.AtribuirMensagem(MensagemWeb.MensagemSucesso);
         btnPesquisar_Click(sender, e);
     }
     protected void ddlCidade_DataBound(object sender, EventArgs e)

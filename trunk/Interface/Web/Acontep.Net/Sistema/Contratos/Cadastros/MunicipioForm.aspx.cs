@@ -10,6 +10,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using Acontep.Manutencao.Seguranca;
 using Acontep.UI.Web;
+using eWorld.UI;
 
 public partial class Sistema_Contratos_Cadastros_MunicipioForm : System.Web.UI.Page
 {
@@ -77,5 +78,20 @@ public partial class Sistema_Contratos_Cadastros_MunicipioForm : System.Web.UI.P
     protected void ddlEstado_DataBound(object sender, EventArgs e)
     {
         ((DropDownList)sender).SelectedValue = IDEstadoPadrao;
+    }
+  
+    protected void ddlPrefeitos_DataBinding(object sender, EventArgs e)
+    {
+        ((DropDownList)sender).Items.Clear();
+        ((DropDownList)sender).Items.Add(new ListItem(":: Informe o prefeito ::", string.Empty));
+    }
+    protected void odsManterItem_Updating(object sender, ObjectDataSourceMethodEventArgs e)
+    {
+        e.InputParameters["Cep"] = FormUtil.ObterControle<MaskedTextBox>(fvwItem.Controls, "tbxCep").Text.Replace(".", "").Replace("-", "");
+    }
+    protected void btnCancelar_Click(object sender, EventArgs e)
+    {
+        fvwItem.ChangeMode(FormViewMode.ReadOnly);
+        
     }
 }

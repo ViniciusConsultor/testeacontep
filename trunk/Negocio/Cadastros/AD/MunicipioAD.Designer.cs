@@ -1,5 +1,5 @@
 // Classe gerada automaticamente pela ferramenta GeradorCRUD
-// em seg 26/03/2007 
+// em sáb 07/04/2007 
 // Por FRANCISCONB\Chico na máquina FRANCISCONB 
 using System;
 using System.Collections.Generic;
@@ -21,10 +21,14 @@ SELECT
 	IDCidade, 
 	IDEstado, 
 	Nome, 
-	DATINC, 
-	DATHOR, 
-	USUINC, 
-	USUTRA 
+	NomeCompleto, 
+	Logradouro, 
+	Bairro, 
+	Cep, 
+	Telefone, 
+	Fax, 
+	Email, 
+	IDPrefeito 
 FROM 
 	Cadastros.Municipio
 	  
@@ -45,10 +49,14 @@ SELECT
 	IDCidade, 
 	IDEstado, 
 	Nome, 
-	DATINC, 
-	DATHOR, 
-	USUINC, 
-	USUTRA 
+	NomeCompleto, 
+	Logradouro, 
+	Bairro, 
+	Cep, 
+	Telefone, 
+	Fax, 
+	Email, 
+	IDPrefeito 
 FROM 
 	Cadastros.Municipio
 	  
@@ -63,33 +71,47 @@ FROM
 
 
 	[System.ComponentModel.DataObjectMethod( System.ComponentModel.DataObjectMethodType.Insert)]
-	public static int Inserir (System.Int32 IDEstado, System.String Nome){
+	public static int Inserir (System.Int32 IDEstado, System.String Nome, System.String NomeCompleto, System.String Logradouro, System.String Bairro, System.String Cep, System.String Telefone, System.String Fax, System.String Email, System.Int32? IDPrefeito){
 
       string sql = @"
 INSERT INTO Cadastros.Municipio
 (
  IDEstado, 
  Nome, 
- DATINC, 
- DATHOR, 
- USUINC, 
- USUTRA
+ NomeCompleto, 
+ Logradouro, 
+ Bairro, 
+ Cep, 
+ Telefone, 
+ Fax, 
+ Email, 
+ IDPrefeito
 )
     VALUES 
 (
 @IDEstado, 
 @Nome, 
-GetDate(), 
-GetDate(), 
-@USUINC, 
-@USUTRA
+@NomeCompleto, 
+@Logradouro, 
+@Bairro, 
+@Cep, 
+@Telefone, 
+@Fax, 
+@Email, 
+@IDPrefeito
 ); SELECT SCOPE_IDENTITY();
 ";
 	BdUtil bd = new BdUtil(sql); 
 	bd.AdicionarParametro("@IDEstado", System.Data.DbType.Int32, -1, IDEstado );
 	bd.AdicionarParametro("@Nome", System.Data.DbType.AnsiString, 50, Nome );
-	bd.AdicionarParametro("@USUINC", System.Data.DbType.AnsiString, 50, System.Threading.Thread.CurrentPrincipal.Identity.Name );
-	bd.AdicionarParametro("@USUTRA", System.Data.DbType.AnsiString, 50, System.Threading.Thread.CurrentPrincipal.Identity.Name );
+	bd.AdicionarParametro("@NomeCompleto", System.Data.DbType.AnsiString, 100, NomeCompleto );
+	bd.AdicionarParametro("@Logradouro", System.Data.DbType.AnsiString, 200, Logradouro );
+	bd.AdicionarParametro("@Bairro", System.Data.DbType.AnsiString, 200, Bairro );
+	bd.AdicionarParametro("@Cep", System.Data.DbType.AnsiString, 8, Cep );
+	bd.AdicionarParametro("@Telefone", System.Data.DbType.AnsiString, 15, Telefone );
+	bd.AdicionarParametro("@Fax", System.Data.DbType.AnsiString, 15, Fax );
+	bd.AdicionarParametro("@Email", System.Data.DbType.AnsiString, 200, Email );
+	bd.AdicionarParametro("@IDPrefeito", System.Data.DbType.Int32, -1, IDPrefeito );
 
 	 object objRetorno = bd.ExecuteScalar();
 	 return ( objRetorno == null || Convert.IsDBNull(objRetorno)) ? 0 : Convert.ToInt32(objRetorno);
@@ -97,19 +119,32 @@ GetDate(),
 
 
 	[System.ComponentModel.DataObjectMethod( System.ComponentModel.DataObjectMethodType.Update)]
-public static void Alterar (System.Int32 original_IDCidade, System.Int32 IDEstado, System.String Nome){
+public static void Alterar (System.Int32 original_IDCidade, System.Int32 IDEstado, System.String Nome, System.String NomeCompleto, System.String Logradouro, System.String Bairro, System.String Cep, System.String Telefone, System.String Fax, System.String Email, System.Int32? IDPrefeito){
       string sql = 
 @"UPDATE Cadastros.Municipio SET
 	IDEstado= @IDEstado
 , 	Nome= @Nome
-, 	DATHOR= GetDate()
-, 	USUTRA= @USUTRA
+, 	NomeCompleto= @NomeCompleto
+, 	Logradouro= @Logradouro
+, 	Bairro= @Bairro
+, 	Cep= @Cep
+, 	Telefone= @Telefone
+, 	Fax= @Fax
+, 	Email= @Email
+, 	IDPrefeito= @IDPrefeito
 
     WHERE IDCidade = @original_IDCidade";
 	BdUtil bd = new BdUtil(sql);
 	bd.AdicionarParametro("@IDEstado", System.Data.DbType.Int32, -1, IDEstado );
 	bd.AdicionarParametro("@Nome", System.Data.DbType.AnsiString, 50, Nome );
-	bd.AdicionarParametro("@USUTRA", System.Data.DbType.AnsiString, 50, System.Threading.Thread.CurrentPrincipal.Identity.Name );
+	bd.AdicionarParametro("@NomeCompleto", System.Data.DbType.AnsiString, 100, NomeCompleto );
+	bd.AdicionarParametro("@Logradouro", System.Data.DbType.AnsiString, 200, Logradouro );
+	bd.AdicionarParametro("@Bairro", System.Data.DbType.AnsiString, 200, Bairro );
+	bd.AdicionarParametro("@Cep", System.Data.DbType.AnsiString, 8, Cep );
+	bd.AdicionarParametro("@Telefone", System.Data.DbType.AnsiString, 15, Telefone );
+	bd.AdicionarParametro("@Fax", System.Data.DbType.AnsiString, 15, Fax );
+	bd.AdicionarParametro("@Email", System.Data.DbType.AnsiString, 200, Email );
+	bd.AdicionarParametro("@IDPrefeito", System.Data.DbType.Int32, -1, IDPrefeito );
 
 	bd.AdicionarParametro("@original_IDCidade", System.Data.DbType.Int32, -1, original_IDCidade );
 

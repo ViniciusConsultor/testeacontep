@@ -32,4 +32,20 @@
     <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
     <NameSpace>Acontep.AD.Contratos</NameSpace>
   </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>ea0ea454-6c2d-47cd-acfa-5beca9dff78b</ID>
+    <Tabela>Contratos.PlanoTrabalho</Tabela>
+    <NomeClasse>PlanoTrabalhoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD.Contratos</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>eee818c3-30d7-494f-9f05-25e1d4cdf3ff</ID>
+    <Tabela>Contratos.Prefeito</Tabela>
+    <NomeClasse>PrefeitoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD.Contratos</NameSpace>
+  </ClasseCRUD>
 </EstruturaSaveRAD>

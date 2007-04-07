@@ -23,15 +23,13 @@
                     <asp:TextBox ID="tbxValor" runat="server"></asp:TextBox></td>
             </tr>
             <tr>
-                <td>
-                </td>
-                <td>
+                <td class="BotaoAcao" colspan="2">
                     <asp:Button ID="btnPesquisar" runat="server" SkinID="Pesquisar" OnClick="btnPesquisar_Click" /></td>
             </tr>
             <tr>
                 <td colspan="2">
                     <asp:Panel ID="pnlResultado" runat="server" GroupingText="Empreiteira" Height="300px"
-                        Width="100%" ScrollBars="Vertical">
+                        Width="100%" ScrollBars="Auto">
                         <x:GridView ID="gvwEmpreiteira" runat="server" AscImage="" AutoGenerateColumns="False"
                             AutoGenerateColumnSelect="RadioButton" AutoGenerateColumnSelectAutoPostBack="True"
                             AutoGenerateSelectButton="True" DescImage="" GenerateColumnSelectIndex="0" ModelSelect="ColumnAndRowSelected"
@@ -71,7 +69,7 @@
         </table>
     </asp:Panel>
     <asp:Panel runat="server" ID="pnlManutencao" GroupingText="Empreiteira:" Width="100%" Visible="False">
-        <asp:FormView ID="fvwItem" runat="server" DataSourceID="odsManutencao" DataKeyNames="IDEmpreiteira">
+        <asp:FormView ID="fvwItem" runat="server" DataSourceID="odsManutencao" DataKeyNames="IDEmpreiteira" Width="100%">
             <InsertItemTemplate>
                 <table width="100%">
                     <tr>

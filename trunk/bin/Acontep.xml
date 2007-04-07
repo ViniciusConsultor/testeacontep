@@ -785,42 +785,6 @@
             Retorna o nome do objeto que causou o erro de Dispoded
             </summary>
         </member>
-        <member name="T:Acontep.InformacaoResource">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:Acontep.InformacaoResource.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:Acontep.InformacaoResource.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:Acontep.InformacaoResource.ConfirmarOperacaoApagar">
-            <summary>
-              Looks up a localized string similar to Tem certeza de que deseja realizar a exclusão..
-            </summary>
-        </member>
-        <member name="P:Acontep.InformacaoResource.SucessoOperacao">
-            <summary>
-              Looks up a localized string similar to Operação realizada com sucesso..
-            </summary>
-        </member>
-        <member name="P:Acontep.InformacaoResource.SucessoOperacaoAlterar">
-            <summary>
-              Looks up a localized string similar to A alteração {0} foi concluída com sucesso..
-            </summary>
-        </member>
-        <member name="P:Acontep.InformacaoResource.SucessoOperacaoIncluir">
-            <summary>
-              Looks up a localized string similar to A inclusão {0} foi realizada com sucesso..
-            </summary>
-        </member>
         <member name="T:Acontep.Formatacao">
             <summary>
             Classe reponsável pelas formatações
@@ -852,6 +816,13 @@
             </summary>
             <param name="valor">Valor a ser aplicada a máscara.</param>
             <returns>Valor na máscara 99.999-999</returns>
+        </member>
+        <member name="M:Acontep.Formatacao.RemoverFormatacaoCep(System.String)">
+            <summary>
+            Remove a formatação de CEP.
+            </summary>
+            <param name="ValorFormatado"></param>
+            <returns></returns>
         </member>
         <member name="M:Acontep.Formatacao.FormatarLike(System.String)">
             <summary>
@@ -1099,31 +1070,6 @@
             <param name="eventType">The type of event.</param>
             <param name="id">The id of the event.</param>
             <param name="data">The data to trace.</param>
-        </member>
-        <member name="T:Acontep.Net.Mail.AcontepSmtpClient">
-            <summary>
-            Cliente de SMTP extendido para as necessidades do Acontep
-            </summary>
-        </member>
-        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.Net.Mail.MailMessage)">
-            <summary>
-            Envia e-mial usando os paramteros passoa por mailMessage
-            </summary>
-            <param name="mailMesasge">e-mail a ser enviado</param>
-        </member>
-        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.Net.Mail.MailMessage,System.Net.Mail.SendCompletedEventHandler)">
-            <summary>
-            Envia e-mial usando os paramteros passoa por mailMessage 
-            com a possibilidade de chamada a evento apos o envio
-            </summary>
-            <param name="mailMesasge">e-mail a ser enviado</param>
-            <param name="sendCompleted">evento vinculado a ser disparado ao terminio do envio</param>
-        </member>
-        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.String)">
-            <summary>
-            Overload para uso facilitado da classe de Log
-            </summary>
-            <param name="mensagem">mensagem formatada para envio</param>
         </member>
         <member name="T:Acontep.Conversao">
             <summary>
@@ -2628,6 +2574,31 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="T:Acontep.Net.Mail.AcontepSmtpClient">
+            <summary>
+            Cliente de SMTP extendido para as necessidades do Acontep
+            </summary>
+        </member>
+        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.Net.Mail.MailMessage)">
+            <summary>
+            Envia e-mial usando os paramteros passoa por mailMessage
+            </summary>
+            <param name="mailMesasge">e-mail a ser enviado</param>
+        </member>
+        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.Net.Mail.MailMessage,System.Net.Mail.SendCompletedEventHandler)">
+            <summary>
+            Envia e-mial usando os paramteros passoa por mailMessage 
+            com a possibilidade de chamada a evento apos o envio
+            </summary>
+            <param name="mailMesasge">e-mail a ser enviado</param>
+            <param name="sendCompleted">evento vinculado a ser disparado ao terminio do envio</param>
+        </member>
+        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.String)">
+            <summary>
+            Overload para uso facilitado da classe de Log
+            </summary>
+            <param name="mensagem">mensagem formatada para envio</param>
         </member>
         <member name="T:Acontep.Dado.ContextoAcessoDado">
             <summary>
