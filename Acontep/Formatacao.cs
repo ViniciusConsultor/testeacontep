@@ -78,6 +78,8 @@ namespace Acontep
         /// <returns>Valor na máscara 99.999-999</returns>
         public static string FormatarCep(object valor)
         {
+            if (valor == null)
+                return string.Empty;
             string ValorParaFormatar = valor.ToString();
             ValorParaFormatar = ValorParaFormatar.Replace(".", "");
             ValorParaFormatar = ValorParaFormatar.Replace("-", "").Trim();
@@ -91,6 +93,15 @@ namespace Acontep
                     ValorParaFormatar.Substring(5)
                     );
 
+        }
+        /// <summary>
+        /// Remove a formatação de CEP.
+        /// </summary>
+        /// <param name="ValorFormatado"></param>
+        /// <returns></returns>
+        public static string RemoverFormatacaoCep(string ValorFormatado)
+        {
+            return ValorFormatado.Replace(".", "").Replace("-", "");
         }
         /// <summary>
         /// Formata para busca que usam like colocando no final "%" caso não exista

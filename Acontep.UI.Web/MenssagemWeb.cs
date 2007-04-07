@@ -14,7 +14,7 @@ namespace Acontep.UI.Web
         {
             get
             {
-                return new MensagemWeb(Acontep.InformacaoResource.SucessoOperacao, Tipo.Sucesso);
+                return new MensagemWeb("Operação realizada com sucesso.", Tipo.Sucesso);
             }
         }
         public static MensagemWeb MensagemInclusaoSucesso

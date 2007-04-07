@@ -73,9 +73,9 @@ Default skin template. The following skins are provided as examples only.
 <asp:LinkButton runat="server" SkinID="Login" />
 <asp:LinkButton runat="server" SkinID="SiteMapPath" CssClass="moduloFuncao" />
 
-<asp:TextBox runat="server" Width="95%" />
+<asp:TextBox runat="server" Width="99.3%" />
 
-<asp:FileUpload AlternateText="Versão de browser incompativel" runat="server" Width="99%"/>
+<asp:FileUpload AlternateText="Versão de browser incompativel" runat="server" Width="100%"/>
 
 <asp:CheckBox runat="server" CssClass="tituloGrid" />
 <asp:CheckBox runat="server" SkinID="Selecionado" CssClass="tituloGrid" />
@@ -89,7 +89,7 @@ Default skin template. The following skins are provided as examples only.
 <asp:RadioButtonList runat="server" RepeatDirection="Horizontal" CssClass="tituloGrid"/>
 <asp:RadioButtonList runat="server" SkinID="Vertical" RepeatDirection="Vertical" CssClass="tituloGrid"/>
 
-<asp:DropDownList runat="server" Width="97%"  />
+<asp:DropDownList runat="server" Width="100%"  />
 
 <asp:ListBox runat="server" width="100%" height="150px" />
 
@@ -278,12 +278,14 @@ Default skin template. The following skins are provided as examples only.
 
 
 <%--Compomentes Externos --%>
-<ew:NumericBox SkinID="Valor" runat="server" DecimalPlaces="2" TextAlign="Right" Width="95%" DecimalSign="," GroupingSeparator="." />
-<ew:NumericBox SkinID="Inteiro" runat="server" DecimalPlaces="0" TextAlign="Right" Width="99%" DecimalSign="," GroupingSeparator="." />
+<ew:NumericBox SkinID="Valor" runat="server" DecimalPlaces="2" TextAlign="Right" Width="99.3%" DecimalSign="," GroupingSeparator="." />
+<ew:NumericBox SkinID="Inteiro" runat="server" DecimalPlaces="0" TextAlign="Right" Width="99.3%" DecimalSign="," GroupingSeparator="." />
 <ew:NumericBox SkinID="ValorSemTamanhoDef" runat="server" DecimalPlaces="2" TextAlign="Right" DecimalSign="," GroupingSeparator="." />
-<ew:MaskedTextBox runat="server" Width="95%"/>
-<ew:MaskedTextBox runat="server" SkinID="Inteiro" Mask="999999999"  Width="95%"/>
-<ew:MaskedTextBox runat="server" SkinID="CPF" Mask="999.999.999-99" Width="90px"/>
-<ew:MaskedTextBox runat="server" SkinID="CNPJ" Mask="99.999.999/9999-99" Width="100px"/>
-<ew:calendarpopup runat="server" DisplayOffsetX="-100" Width="75%" Culture="Portuguese (Brazil)" ShowGoToToday="True" GoToTodayText="Hoje: " ClearDateText="Limpar Data"/>
+<ew:MaskedTextBox runat="server" Width="99.3%"/>
+<ew:MaskedTextBox runat="server" SkinID="Inteiro" Mask="999999999"  Width="99.3%"/>
+<ew:MaskedTextBox runat="server" SkinID="Telefone" Mask="(99)9999-9999" Width="99.3%"/>
+<ew:MaskedTextBox runat="server" SkinID="Cep" Mask="99.999-999" Width="99.3%"/>
+<ew:MaskedTextBox runat="server" SkinID="CPF" Mask="999.999.999-99" Width="99.3%"/>
+<ew:MaskedTextBox runat="server" SkinID="CNPJ" Mask="99.999.999/9999-99" Width="99.3"/>
+<ew:calendarpopup runat="server" DisplayOffsetY="-120"  DisplayOffsetX="-130" Width="65%" Culture="Portuguese (Brazil)" ShowGoToToday="True" GoToTodayText="Hoje: " ClearDateText="Limpar Data"/>
 <ew:calendarpopup SkinID="SemWidth" runat="server" DisplayOffsetX="-100" ShowGoToToday="True" GoToTodayText="Hoje: " ClearDateText="Limpar Data"/>
