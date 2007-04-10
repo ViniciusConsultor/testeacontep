@@ -4,167 +4,55 @@
         <name>Acontep</name>
     </assembly>
     <members>
-        <member name="T:Acontep.Validacoes.ValidacaoEventArgs">
+        <member name="T:Acontep.AcessoDados">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.Validacoes.ValidacaoEventArgs.#ctor(System.String,System.Object)">
+        <member name="M:Acontep.AcessoDados.#ctor">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Acontep.Validacoes.ValidacaoEventArgs.Valor">
+        <member name="M:Acontep.AcessoDados.QuandoIniciando">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Acontep.Validacoes.ValidacaoEventArgs.RotuloMensagemErro">
+        <member name="E:Acontep.AcessoDados.Iniciando">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Acontep.Validacoes.ValidacaoEventArgs.MensagemErro">
+        <member name="T:Acontep.AcessoInvalidoException">
             <summary>
             
             </summary>
         </member>
-        <member name="T:Acontep.Validacoes.ValidacaoDataSet">
+        <member name="M:Acontep.AcessoInvalidoException.#ctor">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.Validacoes.ValidacaoDataSet.#ctor(System.Data.DataSet)">
+        <member name="M:Acontep.AcessoInvalidoException.#ctor(System.String)">
             <summary>
             
             </summary>
-            <param name="owner"></param>
+            <param name="message"></param>
         </member>
-        <member name="M:Acontep.Validacoes.ValidacaoDataSet.ObterValidacaoDataSet(System.Data.DataSet)">
+        <member name="M:Acontep.AcessoInvalidoException.#ctor(System.String,System.Exception)">
             <summary>
             
             </summary>
-            <param name="dataSet"></param>
-            <returns></returns>
+            <param name="message"></param>
+            <param name="innerException"></param>
         </member>
-        <member name="P:Acontep.Validacoes.ValidacaoDataSet.Item(System.Data.DataTable)">
+        <member name="M:Acontep.AcessoInvalidoException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             
             </summary>
-            <param name="dataTable"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoDataSet.Item(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="tableName"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoDataSet.Item(System.Int32)">
-            <summary>
-            
-            </summary>
-            <param name="tableIndex"></param>
-            <returns></returns>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoDataSet.ValidacaoExtendProperty">
-            <summary>
-            Nome da propriedade extendida do <see cref="T:System.Data.DataSet"/> que contem
-            <c>ValidacaoDataTable</c>
-            </summary>
-        </member>
-        <member name="T:Acontep.OpcaoEscopo">
-            <summary>
-            Opcoes para modificar como <see cref="P:Acontep.Escopo.Atual"/> é afetado quando construindo um novo escopo
-            </summary>
-        </member>
-        <member name="F:Acontep.OpcaoEscopo.Requerido">
-            <summary>
-            Se nao existir nenhum escopo entao cria um novo, caso contrario nao faz nada. Essa é a opção padrão
-            </summary>
-        </member>
-        <member name="F:Acontep.OpcaoEscopo.RequerNovo">
-            <summary>
-            Informa que esse é o escopo atual (armazena escopos anteriores e restaura eles no dispose)
-            </summary>
-            <remarks>
-            Use essa opção se deseja usar a mesma conexao mas em uma transação diferente, ou mesmo sem transacao.
-            </remarks>
-        </member>
-        <member name="T:Acontep.OpcaoTransacao">
-            <summary>
-            Opcoes para modificar como <see cref="P:Acontep.Escopo.Atual"/> lida com a criacao de transacoes
-            </summary>
-        </member>
-        <member name="F:Acontep.OpcaoTransacao.Automatico">
-            <summary>
-            Usa a transacao corrente se existir no escopo, caso contrario nao faz nada. Essa é a opção padrão
-            </summary>
-        </member>
-        <member name="F:Acontep.OpcaoTransacao.Requerido">
-            <summary>
-            Usa a transacao corrente se existir no escopo, caso contrario cria um novo escopo com uma transacao aberta. 
-            </summary>
-            <remarks>Se uma for solicitado a criacao de uma transacao dentro de um escopo ja existente, e não
-            for informado <see cref="F:Acontep.OpcaoEscopo.Requerido"/> explicitamente entao um novo escopo sera iniciado de forma transparente, 
-            fazendo com que ao fim do escopo que iniciou uma transação o commit ocorra.</remarks>
-        </member>
-        <member name="T:Acontep.Intervalo">
-            <summary>
-            Tipo de intervalo a ser verificado na conversao
-            </summary>
-        </member>
-        <member name="F:Acontep.Intervalo.Igual">
-            <summary>
-            Validar valor igual
-            </summary>
-        </member>
-        <member name="F:Acontep.Intervalo.Menor">
-            <summary>
-            Validar apenas valor menor
-            </summary>
-        </member>
-        <member name="F:Acontep.Intervalo.Maior">
-            <summary>
-            Validar apenas valor maior
-            </summary>
-        </member>
-        <member name="F:Acontep.Intervalo.MenorIgual">
-            <summary>
-            Validar valor menor ou igual
-            </summary>
-        </member>
-        <member name="F:Acontep.Intervalo.MaiorIgual">
-            <summary>
-            Validar valor maior ou igual
-            </summary>
-        </member>
-        <member name="F:Acontep.Intervalo.ContidoExclusivo">
-            <summary>
-            Validar valor contido em um intervalo mas nao igual
-            </summary>
-        </member>
-        <member name="F:Acontep.Intervalo.ContidoInclusivo">
-            <summary>
-            Validar valor contido em um intervalo e também igual
-            </summary>
-        </member>
-        <member name="T:Acontep.Dado.BdUtil">
-            <summary>
-            Utilitario de execucao de comandos via ADO.NET. Sempre instanciar dentro do <see cref="T:Acontep.Escopo"/> onde se deseja usar.
-            </summary>
-            <remarks>
-            Se existir um <see cref="P:Acontep.Dado.BdUtil.ContextoAcessoDado"/> em <see cref="P:Acontep.Escopo.Atual"/> entao usa o mesmo,
-            compartilhando conexoes e transações dentro de um mesmo escopo.
-            Se nao existir <see cref="P:Acontep.Escopo.Atual"/> um <see cref="P:Acontep.Dado.BdUtil.ContextoAcessoDado"/> é criado exclusivamente
-            para a instancia do <c>BdUtil</c>.
-            Opcionalmente o <see cref="P:Acontep.Dado.BdUtil.ContextoAcessoDado"/> pode ser atribuido diretamente via propriedade 
-            <see cref="P:Acontep.Dado.BdUtil.ContextoAcessoDado"/>
-            </remarks>
-            <summary>
-            Operacoes de classe de BdUtil
-            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
         </member>
         <member name="T:Acontep.Componente">
             <summary>
@@ -212,6 +100,285 @@
             <summary>
             A mensagem de erro que sera passada como parametro em <see cref="T:System.ObjectDisposedException"/> na
             chamada de <see cref="M:Acontep.Componente.ChecarDisposed"/>
+            </summary>
+        </member>
+        <member name="T:Acontep.Conversao">
+            <summary>
+            Metodos de conversao
+            </summary>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String)">
+            <summary>
+            Conversao para o tipo <typeparamref name="T"/> aceitando ou nao nulo se nulo for permitido
+            </summary>
+            <typeparam name="T">Tipo a ser convertido</typeparam>
+            <param name="valor">Valor a ser convertido</param>
+            <param name="rotuloMensagemErro">Rotulo usado na mensagem de erro se a conversao nao for possivel</param>
+            <returns><paramref name="valor"/> convertido para o tipo <typeparamref name="T"/></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="larguraIgual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <param name="larguraIgual"></param>
+            <param name="valorIgual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <param name="larguraIgual"></param>
+            <param name="valorMinimo"></param>
+            <param name="valorMaximo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="requerido"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="requerido"></param>
+            <param name="larguraIgual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="requerido"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="requerido"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <param name="larguraIgual"></param>
+            <param name="valorIgual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="requerido"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <param name="larguraIgual"></param>
+            <param name="valorMinimo"></param>
+            <param name="valorMaximo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="larguraIgual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <param name="larguraIgual"></param>
+            <param name="valorIgual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <param name="larguraIgual"></param>
+            <param name="valorMinimo"></param>
+            <param name="valorMaximo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="requerido"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="requerido"></param>
+            <param name="larguraIgual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="requerido"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="requerido"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <param name="larguraIgual"></param>
+            <param name="valorIgual"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="valor"></param>
+            <param name="rotuloMensagemErro"></param>
+            <param name="valorConvertido"></param>
+            <param name="mensagemErro"></param>
+            <param name="requerido"></param>
+            <param name="larguraMinima"></param>
+            <param name="larguraMaxima"></param>
+            <param name="larguraIgual"></param>
+            <param name="valorMinimo"></param>
+            <param name="valorMaximo"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Acontep.Dado.BdUtil">
+            <summary>
+            Utilitario de execucao de comandos via ADO.NET. Sempre instanciar dentro do <see cref="T:Acontep.Escopo"/> onde se deseja usar.
+            </summary>
+            <remarks>
+            Se existir um <see cref="P:Acontep.Dado.BdUtil.ContextoAcessoDado"/> em <see cref="P:Acontep.Escopo.Atual"/> entao usa o mesmo,
+            compartilhando conexoes e transações dentro de um mesmo escopo.
+            Se nao existir <see cref="P:Acontep.Escopo.Atual"/> um <see cref="P:Acontep.Dado.BdUtil.ContextoAcessoDado"/> é criado exclusivamente
+            para a instancia do <c>BdUtil</c>.
+            Opcionalmente o <see cref="P:Acontep.Dado.BdUtil.ContextoAcessoDado"/> pode ser atribuido diretamente via propriedade 
+            <see cref="P:Acontep.Dado.BdUtil.ContextoAcessoDado"/>
+            </remarks>
+            <summary>
+            Operacoes de classe de BdUtil
             </summary>
         </member>
         <member name="F:Acontep.Dado.BdUtil.NOME_PARAMETRO_RETORNO">
@@ -785,52 +952,6 @@
             Retorna o nome do objeto que causou o erro de Dispoded
             </summary>
         </member>
-        <member name="T:Acontep.Formatacao">
-            <summary>
-            Classe reponsável pelas formatações
-            </summary>
-        </member>
-        <member name="M:Acontep.Formatacao.FormatarCPF(System.Object)">
-            <summary>
-            Formata um valor para a mascara de CPF. Caso o tipo não seja identificado, ele retorna o próprio valor.
-            </summary>
-            <param name="cpf">valor que será aplicado a máscara</param>
-        </member>
-        <member name="M:Acontep.Formatacao.FormatarCnpj(System.Object)">
-            <summary>
-            Formata um valor para a mascara de Cnpj. Caso o tipo não seja identificado, ele retorna o próprio valor.
-            </summary>
-            <param name="cnpj">valor que será aplicado a máscara</param>
-        </member>
-        <member name="M:Acontep.Formatacao.FormatarCnpjCpf(System.Object,System.Object)">
-            <summary>
-            Formata um valor para a mascara de CPF ou Cnpj. Caso o tipo não seja identificado, ele retorna o próprio valor.
-            </summary>
-            <param name="valor">valor que será aplicado a máscara</param>
-            <param name="tipo">Tipo da máscara. [P] =  CPF e [J] = CNPJ</param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Formatacao.FormatarCep(System.Object)">
-            <summary>
-            Aplica a máscara de CEP
-            </summary>
-            <param name="valor">Valor a ser aplicada a máscara.</param>
-            <returns>Valor na máscara 99.999-999</returns>
-        </member>
-        <member name="M:Acontep.Formatacao.RemoverFormatacaoCep(System.String)">
-            <summary>
-            Remove a formatação de CEP.
-            </summary>
-            <param name="ValorFormatado"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Formatacao.FormatarLike(System.String)">
-            <summary>
-            Formata para busca que usam like colocando no final "%" caso não exista
-            </summary>
-            <param name="valor">valor a ser consultado</param>
-            <returns></returns>
-        </member>
         <member name="T:Acontep.Dado.CommandWrapper">
             <summary>
             Encapsula um command, sem instanciar ele
@@ -852,196 +973,94 @@
             Obtem ou atribui <see cref="P:System.Data.Common.DbCommand.CommandText"/>
             </summary>
         </member>
-        <member name="T:Acontep.Validacoes.ValorInvalidoException">
+        <member name="T:Acontep.Dado.ContextoAcessoDado">
             <summary>
             
             </summary>
         </member>
-        <member name="T:Acontep.AcontepException">
+        <member name="M:Acontep.Dado.ContextoAcessoDado.#ctor(System.Data.Common.DbProviderFactory,System.String)">
+            <summary>
+            Construtor usando configuração de string de conexao customizada, independente de app.config
+            </summary>
+            <param name="providerFactory">Provider a ser usado</param>
+            <param name="connectionString">String de conexao</param>
+        </member>
+        <member name="M:Acontep.Dado.ContextoAcessoDado.#ctor(System.String,System.String)">
+            <summary>
+            Construtor usando configuração de string de conexao customizada, independente de app.config
+            </summary>
+            <param name="providerName">Nome do provider a ser usado</param>
+            <param name="connectionString">String de conexao</param>
+        </member>
+        <member name="M:Acontep.Dado.ContextoAcessoDado.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="connectionStringSettingName"></param>
+        </member>
+        <member name="M:Acontep.Dado.ContextoAcessoDado.#ctor">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.AcontepException.#ctor">
+        <member name="M:Acontep.Dado.ContextoAcessoDado.Dispose(System.Boolean)">
+            <summary>
+            Libera recursos envolvidos
+            </summary>
+            <param name="disposing">Indica se o metodo esta sendo chamado por dispose ou pelo finalizador</param>
+        </member>
+        <member name="P:Acontep.Dado.ContextoAcessoDado.ConnectionStringSettingName">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.AcontepException.#ctor(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="message"></param>
-        </member>
-        <member name="M:Acontep.AcontepException.#ctor(System.String,System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="message"></param>
-            <param name="innerException"></param>
-        </member>
-        <member name="M:Acontep.AcontepException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            
-            </summary>
-            <param name="info"></param>
-            <param name="context"></param>
-        </member>
-        <member name="M:Acontep.Validacoes.ValorInvalidoException.#ctor">
+        <member name="P:Acontep.Dado.ContextoAcessoDado.Connection">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.Validacoes.ValorInvalidoException.#ctor(System.String)">
+        <member name="P:Acontep.Dado.ContextoAcessoDado.Transaction">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.Validacoes.ValorInvalidoException.#ctor(System.String,System.Exception)">
+        <member name="P:Acontep.Dado.ContextoAcessoDado.ProviderFactory">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.Validacoes.ValorInvalidoException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+        <member name="P:Acontep.Dado.ContextoAcessoDado.MensagemErroObjectDisposedException">
             <summary>
             
             </summary>
         </member>
-        <member name="T:Acontep.Validacoes.ValidacaoEventHandler">
+        <member name="T:Acontep.Dado.TipoCommandDataAdapter">
             <summary>
-            
+            Indica qual é a propriedade que o <see cref="T:Acontep.Dado.BdUtil"/> vai configurar do <see cref="P:Acontep.Dado.BdUtil.DataAdapter"/>
+            quando configurando parametros e texto do command.
             </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
+            <remarks>
+            Com essa opção pode-se configurar 
+            </remarks>
         </member>
-        <member name="T:Acontep.TipoErroContraint">
+        <member name="F:Acontep.Dado.TipoCommandDataAdapter.Select">
             <summary>
-            Tipos de excessões
-            </summary>
-        </member>
-        <member name="F:Acontep.TipoErroContraint.FK_Insert">
-            <summary>
-            Violação de FK de insert.
+            Operação SELECT. Esse é o padrão
             </summary>
         </member>
-        <member name="F:Acontep.TipoErroContraint.FK_Delete">
+        <member name="F:Acontep.Dado.TipoCommandDataAdapter.Insert">
             <summary>
-            Violação de Fk de delete.
+            Operação INSERT
             </summary>
         </member>
-        <member name="F:Acontep.TipoErroContraint.PrimaryKey">
+        <member name="F:Acontep.Dado.TipoCommandDataAdapter.Update">
             <summary>
-            Violação de primary key.
+            Operação UPDATE
             </summary>
         </member>
-        <member name="F:Acontep.TipoErroContraint.UniqueKey">
+        <member name="F:Acontep.Dado.TipoCommandDataAdapter.Delete">
             <summary>
-            Violação de Unique Key.
-            </summary>
-        </member>
-        <member name="F:Acontep.TipoErroContraint.Constraint">
-            <summary>
-            Violação de constraint. Ainda não está implementado.
-            </summary>
-        </member>
-        <member name="F:Acontep.TipoErroContraint.NA">
-            <summary>
-            Sem identificação de violação
-            </summary>
-        </member>
-        <member name="T:Acontep.TratamentoExcessao">
-            <summary>
-            Summary description for Excecoes
-            </summary>
-        </member>
-        <member name="M:Acontep.TratamentoExcessao.Tratar(System.Exception,System.String@)">
-            <summary>
-            Método para tratar a exceção
-            </summary>
-            <param name="excecao">Exceção</param>
-            <param name="mensagem"></param>
-            <returns>Indicativo se a exceção foi tratada com sucesso ou não</returns>
-        </member>
-        <member name="M:Acontep.TratamentoExcessao.TratarSqlException(System.Data.SqlClient.SqlException,System.String@)">
-            <summary>
-            Tratamento de exceções SqlException
-            </summary>
-            <param name="excecao"></param>
-            <param name="mensagem"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.TratamentoExcessao.ObterMensagemConstrantPadrao(System.Data.SqlClient.SqlException)">
-            <summary>
-            Obtem (gera) a mensagem padrão para a exceção
-            </summary>
-            <param name="excecao">Exceção</param>
-            <returns>Mensagem padrão para a exceção</returns>
-        </member>
-        <member name="M:Acontep.TratamentoExcessao.ObterMensagemConstrant(System.String,Acontep.TipoErroContraint)">
-            <summary>
-            Recupera a mensagem armazenada no banco de dados para a constraint fornecida
-            Tabela: ConstrInfo
-            </summary>
-            <param name="constraint">Nome da constraint</param>
-            <returns>Mensagem da constraint</returns>
-            <param name="tipo">Tipo da constraint</param>
-        </member>
-        <member name="M:Acontep.TratamentoExcessao.ObterNomeConstraint(System.String,System.Int32)">
-            <summary>
-            Obtem o nome da constraint contido na mensagem da exceção
-            </summary>
-            <param name="message">Mensagem da exceção</param>
-            <param name="number">número da exceção retornado pelo Sql Server</param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.TratamentoExcessao.ExtrairNomeConstraint(System.String,System.String,System.Char)">
-            <summary>
-            Extrai o nome da constraint
-            </summary>
-            <param name="inicioMensagem">parte inicial (fixa) da mensagem</param>
-            <param name="message">mensagem da exceção</param>
-            <param name="delimitador">delimitidor do nome da constraint na mensagem de exceção</param>
-            <returns></returns>
-        </member>
-        <member name="T:Acontep.Mensagens.Mensagens">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:Acontep.Mensagens.Mensagens.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:Acontep.Mensagens.Mensagens.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:Acontep.Mensagens.Mensagens.ErroLoginInvalido">
-            <summary>
-              Looks up a localized string similar to Acesso solicitado invalido.
-            </summary>
-        </member>
-        <member name="P:Acontep.Mensagens.Mensagens.ErroNovoEscopoRequerido">
-            <summary>
-              Looks up a localized string similar to A opção de escopo da transação requer um novo escopo de execução..
-            </summary>
-        </member>
-        <member name="P:Acontep.Mensagens.Mensagens.ErroTipoDadoAplicacaoInvalido">
-            <summary>
-              Looks up a localized string similar to O tipo de dado informado é invalido para a {0}.
-            </summary>
-        </member>
-        <member name="P:Acontep.Mensagens.Mensagens.ErroTransacaoRequerNovoEscopo">
-            <summary>
-              Looks up a localized string similar to Não é possível iniciar uma nova transação se já existir um escopo, favor selecionar OpcaoEscopo.RequerNovo.
-            </summary>
-        </member>
-        <member name="P:Acontep.Mensagens.Mensagens.ErroValorNulo">
-            <summary>
-              Looks up a localized string similar to O valor informado para {0} não pode ser nulo.
+            Operação DELETE
             </summary>
         </member>
         <member name="T:Acontep.Diagnostico.EmailTraceListener">
@@ -1071,407 +1090,233 @@
             <param name="id">The id of the event.</param>
             <param name="data">The data to trace.</param>
         </member>
-        <member name="T:Acontep.Conversao">
-            <summary>
-            Metodos de conversao
-            </summary>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String)">
-            <summary>
-            Conversao para o tipo <typeparamref name="T"/> aceitando ou nao nulo se nulo for permitido
-            </summary>
-            <typeparam name="T">Tipo a ser convertido</typeparam>
-            <param name="valor">Valor a ser convertido</param>
-            <param name="rotuloMensagemErro">Rotulo usado na mensagem de erro se a conversao nao for possivel</param>
-            <returns><paramref name="valor"/> convertido para o tipo <typeparamref name="T"/></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="larguraIgual"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <param name="larguraIgual"></param>
-            <param name="valorIgual"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object,System.Object)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <param name="larguraIgual"></param>
-            <param name="valorMinimo"></param>
-            <param name="valorMaximo"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="requerido"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean,System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="requerido"></param>
-            <param name="larguraIgual"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="requerido"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="requerido"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <param name="larguraIgual"></param>
-            <param name="valorIgual"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.Para``1(System.Object,System.String,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object,System.Object)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="requerido"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <param name="larguraIgual"></param>
-            <param name="valorMinimo"></param>
-            <param name="valorMaximo"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="larguraIgual"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <param name="larguraIgual"></param>
-            <param name="valorIgual"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object,System.Object)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <param name="larguraIgual"></param>
-            <param name="valorMinimo"></param>
-            <param name="valorMaximo"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="requerido"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean,System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="requerido"></param>
-            <param name="larguraIgual"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="requerido"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="requerido"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <param name="larguraIgual"></param>
-            <param name="valorIgual"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.Conversao.TentarPara``1(System.Object,System.String,``0@,System.String@,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Object,System.Object)">
-            <summary>
-            
-            </summary>
-            <typeparam name="T"></typeparam>
-            <param name="valor"></param>
-            <param name="rotuloMensagemErro"></param>
-            <param name="valorConvertido"></param>
-            <param name="mensagemErro"></param>
-            <param name="requerido"></param>
-            <param name="larguraMinima"></param>
-            <param name="larguraMaxima"></param>
-            <param name="larguraIgual"></param>
-            <param name="valorMinimo"></param>
-            <param name="valorMaximo"></param>
-            <returns></returns>
-        </member>
-        <member name="T:Acontep.Validacoes.CadastrosValidacao">
-            <summary>
-            Validacoes e testes de escopo geral
-            </summary>
-        </member>
-        <member name="M:Acontep.Validacoes.CadastrosValidacao.EhCEP(System.String)">
+        <member name="T:Acontep.Diagnostico.Log">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.Validacoes.CadastrosValidacao.EhTelefone(System.String)">
+        <member name="M:Acontep.Diagnostico.Log.DetalhesGeral(System.String)">
             <summary>
             
             </summary>
+            <param name="mensagem"></param>
         </member>
-        <member name="M:Acontep.Validacoes.CadastrosValidacao.ValidarCEP(System.Object,Acontep.Validacoes.ValidacaoEventArgs)">
+        <member name="M:Acontep.Diagnostico.Log.AvisoGeral(System.String)">
             <summary>
             
             </summary>
+            <param name="mensagem"></param>
         </member>
-        <member name="M:Acontep.Validacoes.CadastrosValidacao.ValidarTelefone(System.Object,Acontep.Validacoes.ValidacaoEventArgs)">
+        <member name="M:Acontep.Diagnostico.Log.InfoGeral(System.String)">
             <summary>
             
             </summary>
+            <param name="mensagem"></param>
         </member>
-        <member name="T:Acontep.Seguranca.ContextoAutenticacao">
+        <member name="M:Acontep.Diagnostico.Log.ErroGeral(System.String)">
             <summary>
             
             </summary>
+            <param name="mensagem"></param>
         </member>
-        <member name="M:Acontep.Seguranca.ContextoAutenticacao.#ctor">
+        <member name="M:Acontep.Diagnostico.Log.ErroGeral(System.Exception)">
             <summary>
             
             </summary>
+            <param name="exception"></param>
         </member>
-        <member name="P:Acontep.Seguranca.ContextoAutenticacao.Principal">
+        <member name="M:Acontep.Diagnostico.Log.ErroGeral(System.String,System.Exception)">
             <summary>
             
             </summary>
+            <param name="cabecalho"></param>
+            <param name="exception"></param>
         </member>
-        <member name="P:Acontep.Seguranca.ContextoAutenticacao.Identity">
+        <member name="M:Acontep.Diagnostico.Log.DetalhesDebugBiblioteca(System.String)">
             <summary>
             
             </summary>
+            <param name="mensagem"></param>
         </member>
-        <member name="P:Acontep.Seguranca.ContextoAutenticacao.Name">
+        <member name="M:Acontep.Diagnostico.Log.AvisoDebugBiblioteca(System.String)">
             <summary>
             
             </summary>
+            <param name="mensagem"></param>
         </member>
-        <member name="T:Acontep.Validacoes.TipoValidacao">
+        <member name="M:Acontep.Diagnostico.Log.InfoDebugBiblioteca(System.String)">
             <summary>
-            Tipos de validacoes aplicaveis em <see cref="T:Acontep.Validacoes.Validacao"/>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugBiblioteca(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugBiblioteca(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugBiblioteca(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="cabecalho"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.DetalhesDebugNg(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.AvisoDebugNg(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.InfoDebugNg(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugNg(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugNg(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugNg(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="cabecalho"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.DetalhesDebugUI(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.AvisoDebugUI(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.InfoDebugUI(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugUI(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="mensagem"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugUI(System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Acontep.Diagnostico.Log.ErroDebugUI(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="cabecalho"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="T:Acontep.OpcaoEscopo">
+            <summary>
+            Opcoes para modificar como <see cref="P:Acontep.Escopo.Atual"/> é afetado quando construindo um novo escopo
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.Requerido">
+        <member name="F:Acontep.OpcaoEscopo.Requerido">
             <summary>
-            Validar se existe um valor
+            Se nao existir nenhum escopo entao cria um novo, caso contrario nao faz nada. Essa é a opção padrão
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.ValorIgual">
+        <member name="F:Acontep.OpcaoEscopo.RequerNovo">
             <summary>
-            Validar se valor igual
+            Informa que esse é o escopo atual (armazena escopos anteriores e restaura eles no dispose)
+            </summary>
+            <remarks>
+            Use essa opção se deseja usar a mesma conexao mas em uma transação diferente, ou mesmo sem transacao.
+            </remarks>
+        </member>
+        <member name="T:Acontep.OpcaoTransacao">
+            <summary>
+            Opcoes para modificar como <see cref="P:Acontep.Escopo.Atual"/> lida com a criacao de transacoes
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.ValorMinimo">
+        <member name="F:Acontep.OpcaoTransacao.Automatico">
             <summary>
-            Validar se o valor é maior que o valor minimo
+            Usa a transacao corrente se existir no escopo, caso contrario nao faz nada. Essa é a opção padrão
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.ValorMaximo">
+        <member name="F:Acontep.OpcaoTransacao.Requerido">
             <summary>
-            Validar se o valor é menor que o valor maximo
+            Usa a transacao corrente se existir no escopo, caso contrario cria um novo escopo com uma transacao aberta. 
+            </summary>
+            <remarks>Se uma for solicitado a criacao de uma transacao dentro de um escopo ja existente, e não
+            for informado <see cref="F:Acontep.OpcaoEscopo.Requerido"/> explicitamente entao um novo escopo sera iniciado de forma transparente, 
+            fazendo com que ao fim do escopo que iniciou uma transação o commit ocorra.</remarks>
+        </member>
+        <member name="T:Acontep.Intervalo">
+            <summary>
+            Tipo de intervalo a ser verificado na conversao
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.ValorMinimoIgual">
+        <member name="F:Acontep.Intervalo.Igual">
             <summary>
-            Validar se o valor é maior ou igual ao valor minimo
+            Validar valor igual
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.ValorMaximoIgual">
+        <member name="F:Acontep.Intervalo.Menor">
             <summary>
-            Validar se o valor é menor ou igual ao valor maximo
+            Validar apenas valor menor
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.ValorContido">
+        <member name="F:Acontep.Intervalo.Maior">
             <summary>
-            Validar se o valor está contido mas não é igual aos valores do intervalo
+            Validar apenas valor maior
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.ValorContidoInclusivo">
+        <member name="F:Acontep.Intervalo.MenorIgual">
             <summary>
-            Validar se o valor é menor ou igual aos valores do intervalo
+            Validar valor menor ou igual
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraIgual">
+        <member name="F:Acontep.Intervalo.MaiorIgual">
             <summary>
-            Validar se a largura é igual
+            Validar valor maior ou igual
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraMinima">
+        <member name="F:Acontep.Intervalo.ContidoExclusivo">
             <summary>
-            Validar se a largura é maior que a largura minima
+            Validar valor contido em um intervalo mas nao igual
             </summary>
         </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraMaxima">
+        <member name="F:Acontep.Intervalo.ContidoInclusivo">
             <summary>
-            Validar se a largura é menor que a largura maxima
-            </summary>
-        </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraMinimaIgual">
-            <summary>
-            Validar se a largura é maior ou igual ao valor minima
-            </summary>
-        </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraMaximaIgual">
-            <summary>
-            Validar se a largura é menor ou igual ao valor maxima
-            </summary>
-        </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraContida">
-            <summary>
-            Validar se a largura está contida mas não é igual aos valores do intervalo
-            </summary>
-        </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraContidaInclusivo">
-            <summary>
-            Validar se a largura é menor ou igual aos valores do intervalo
-            </summary>
-        </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.Regex">
-            <summary>
-            Validacao usando expressao regular
-            </summary>
-        </member>
-        <member name="F:Acontep.Validacoes.TipoValidacao.Customizada">
-            <summary>
-            Validacao customizada
+            Validar valor contido em um intervalo e também igual
             </summary>
         </member>
         <member name="T:Acontep.Escopo">
@@ -1708,6 +1553,132 @@
             Valor da mensagem de erro de <see cref="T:System.ObjectDisposedException"/>
             </summary>
         </member>
+        <member name="T:Acontep.Formatacao">
+            <summary>
+            Classe reponsável pelas formatações
+            </summary>
+        </member>
+        <member name="F:Acontep.Formatacao.MascaraPlanoTrabalho">
+            <summary>
+            Retorna a máscara para o plano de trabalho que deverá ser utilizada no MaskedTextBox
+            </summary>
+        </member>
+        <member name="M:Acontep.Formatacao.FormatarCPF(System.Object)">
+            <summary>
+            Formata um valor para a mascara de CPF. Caso o tipo não seja identificado, ele retorna o próprio valor.
+            </summary>
+            <param name="cpf">valor que será aplicado a máscara</param>
+        </member>
+        <member name="M:Acontep.Formatacao.FormatarCnpj(System.Object)">
+            <summary>
+            Formata um valor para a mascara de Cnpj. Caso o tipo não seja identificado, ele retorna o próprio valor.
+            </summary>
+            <param name="cnpj">valor que será aplicado a máscara</param>
+        </member>
+        <member name="M:Acontep.Formatacao.FormatarCnpjCpf(System.Object,System.Object)">
+            <summary>
+            Formata um valor para a mascara de CPF ou Cnpj. Caso o tipo não seja identificado, ele retorna o próprio valor.
+            </summary>
+            <param name="valor">valor que será aplicado a máscara</param>
+            <param name="tipo">Tipo da máscara. [P] =  CPF e [J] = CNPJ</param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Formatacao.FormatarCep(System.Object)">
+            <summary>
+            Aplica a máscara de CEP
+            </summary>
+            <param name="valor">Valor a ser aplicada a máscara.</param>
+            <returns>Valor na máscara 99.999-999</returns>
+        </member>
+        <member name="M:Acontep.Formatacao.RemoverFormatacaoCep(System.String)">
+            <summary>
+            Remove a formatação de CEP.
+            </summary>
+            <param name="ValorFormatado"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.Formatacao.FormatarLike(System.String)">
+            <summary>
+            Formata para busca que usam like colocando no final "%" caso não exista
+            </summary>
+            <param name="valor">valor a ser consultado</param>
+            <returns></returns>
+        </member>
+        <member name="T:Acontep.IO.FileHelper">
+            <summary>
+            Classe utilitária para o gerenciamento de arquivos no Acontep
+            </summary>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioTransfer">
+            <summary>
+            Retorna o diretorio onde estão guardados os arquivos para transferência.
+            Todos os arquivos nessa pasta estão passíveis de um "delete".
+            Caso não exista, é criado o diretório.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioTransfer(System.String)">
+            <summary>
+            Retorna o diretorio onde estão guardados os arquivos para transferência.
+            Todos os arquivos nessa pasta estão passíveis de um "delete".
+            Caso não exista, é criado o diretório.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioSistemas(System.Int32)">
+            <summary>
+            Retorna o diretorio onde estão guardados os arquivos de cada sistema.
+            Todos os arquivos nessa pasta sofreão backup.
+            Caso não exista, é criado o diretório.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioSistemas(System.Int32,System.String)">
+            <summary>
+            Retorna o diretorio onde estão guardados os arquivos de cada sistema.
+            Todos os arquivos nessa pasta sofreão backup.
+            Caso não exista, é criado o diretório.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioTabelas(System.String)">
+            <summary>
+            Retorna o diretorio onde estão guardados os arquivos de cada tabela. Por padrão, o nome do arquivo será o ID do registro da tabela.
+            Todos os arquivos nessa pasta sofreão backup.
+            Caso não exista, é criado o diretório.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.ObterPathArquivo(System.String,System.Int32)">
+            <summary>
+            Retorna o path do arquivo. Caso não exista, retorna nulo.
+            </summary>
+            <param name="tabela">The tabela.</param>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.ApagarArquivo(System.String,System.Int32)">
+            <summary>
+            Apaga o arquivo caso ele exista
+            </summary>
+            <param name="tabela">nome da tabela</param>
+            <param name="id">id da tabela</param>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.AtualizarArquivo(System.String,System.Int32,System.String,System.Byte[])">
+            <summary>
+            Atualizar o arquivo (apaga se ele existir e inclui o novo arquivo)
+            </summary>
+            <param name="tabela">nome da tabela</param>
+            <param name="id">id do arquivo</param>
+            <param name="original_fileName"></param>
+            <param name="conteudo"></param>
+        </member>
+        <member name="M:Acontep.IO.FileHelper.CriarPathSeNaoExitir(System.String)">
+            <summary>
+            Cria o diretório para a tabela caso ele não exista
+            </summary>
+            <param name="path"></param>
+        </member>
         <member name="T:Acontep.ErroResource">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -1744,33 +1715,223 @@
               Looks up a localized string similar to O tipo de dado informado é invalido para a {0}..
             </summary>
         </member>
-        <member name="T:Acontep.Dado.TipoCommandDataAdapter">
+        <member name="T:Acontep.IO.HelpZip">
             <summary>
-            Indica qual é a propriedade que o <see cref="T:Acontep.Dado.BdUtil"/> vai configurar do <see cref="P:Acontep.Dado.BdUtil.DataAdapter"/>
-            quando configurando parametros e texto do command.
-            </summary>
-            <remarks>
-            Com essa opção pode-se configurar 
-            </remarks>
-        </member>
-        <member name="F:Acontep.Dado.TipoCommandDataAdapter.Select">
-            <summary>
-            Operação SELECT. Esse é o padrão
+            Summary description for HelpZip.
             </summary>
         </member>
-        <member name="F:Acontep.Dado.TipoCommandDataAdapter.Insert">
+        <member name="M:Acontep.IO.HelpZip.ZipFile(System.String,System.String,System.Boolean)">
             <summary>
-            Operação INSERT
+            Zipa um Arquivo ou um diretorio
+            </summary>
+            <param name="pOrigem">Informa um arquivo ou diretorio a ser zipado</param>
+            <param name="pArquivoDestino">Informa o nome do arquivo zipado</param>
+            <param name="MantarEstruturaPastas">Se true mantem a hierarquia original de pastas, caso contrario compacta tudo em um unico nivel no arquivo zipado</param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.ZipFile(System.String[],System.String)">
+            <summary>
+            Zipa os arquivos
+            </summary>
+            <param name="lstfilenames">lista de arquivos</param>
+            <param name="pArquivoDestino">arquivo de destino(arquivo compactado)</param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.ZipFile(System.String[],System.String,System.Boolean)">
+            <summary>
+            Zipa os arquivos
+            </summary>
+            <param name="lstfilenames">lista de arquivos</param>
+            <param name="pArquivoDestino">arquivo de destino(arquivo compactado)</param>
+            <param name="MantarEstruturaPastas">Mantem toda a estrutura de pasta onde os arquivos estão</param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.ZipFile(System.String,System.String)">
+            <summary>
+            Zipa um Arquivo ou um diretorio
+            </summary>
+            <param name="pOrigem">Informa um arquivo ou diretorio a ser zipado</param>
+            <param name="pArquivoDestino">Informa o nome do arquivo zipado</param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.ZipFile(System.IO.Stream,System.String,System.String)">
+            <summary>
+            Zipa os dados
+            </summary>
+            <param name="pDadosOrigem">Dados a serem compactados</param>
+            <param name="pNomeArquivoOrigem">Nome do aquivo atribuidos aso dados</param>
+            <param name="pNomeArquivoDestino">arquivo de destino(arquivo compactado)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.UnZip(System.String,System.String)">
+            <summary>
+            Desconpacta o arquivo
+            </summary>
+            <param name="pArquivoZipado">caminho ao arquivo a ser descompactado</param>
+            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.UnZip(System.String,System.String,System.Boolean)">
+            <summary>
+            Desconpacta o arquivo
+            </summary>
+            <param name="pArquivoZipado">caminho ao arquivo a ser descompactado</param>
+            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
+            <param name="mesmaPasta"></param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.UnZip(System.IO.FileStream,System.String)">
+            <summary>
+            Desconpacta o arquivo
+            </summary>
+            <param name="File">stream do arquivo a ser descompactado</param>
+            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.UnZip(System.IO.FileStream,System.Boolean,System.String)">
+            <summary>
+            Desconpacta o arquivo
+            </summary>
+            <param name="File">stream do arquivo a ser descompactado</param>
+            <param name="mesmaPasta">define se descompacta os ignorando a estrutura de pastas do arquivo compactado e colocando no <paramref name="pDiretorioDestino"/></param>
+            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.UnZip(System.IO.FileStream,System.String,System.Boolean)">
+            <summary>
+            Desconpacta o arquivo
+            </summary>
+            <param name="arquivo">stream do arquivo a ser descompactado</param>
+            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
+            <param name="CloseFile">define se o stream do arquivo deve ser fechado apos a descompactação</param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.UnZip(System.IO.FileStream,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Desconpacta o arquivo
+            </summary>
+            <param name="arquivo"> stream do arquivo a ser descompactado</param>
+            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
+            <param name="CloseFile">define se o stream do arquivo deve ser fechado apos a descompactação</param>
+            <param name="mesmaPasta">define se descompacta os ignorando a estrutura de pastas do arquivo compactado e colocando no <paramref name="pDiretorioDestino"/> </param>
+        </member>
+        <member name="M:Acontep.IO.HelpZip.UnZipCCFV(System.String,System.String)">
+            <summary>
+            Desconpacta o arquivo
+            </summary>
+            <param name="pArquivoZipado">caminho ao arquivo a ser descompactado</param>
+            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
+        </member>
+        <member name="T:Acontep.Mensagens.Mensagens">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
             </summary>
         </member>
-        <member name="F:Acontep.Dado.TipoCommandDataAdapter.Update">
+        <member name="P:Acontep.Mensagens.Mensagens.ResourceManager">
             <summary>
-            Operação UPDATE
+              Returns the cached ResourceManager instance used by this class.
             </summary>
         </member>
-        <member name="F:Acontep.Dado.TipoCommandDataAdapter.Delete">
+        <member name="P:Acontep.Mensagens.Mensagens.Culture">
             <summary>
-            Operação DELETE
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Acontep.Mensagens.Mensagens.ErroLoginInvalido">
+            <summary>
+              Looks up a localized string similar to Acesso solicitado invalido.
+            </summary>
+        </member>
+        <member name="P:Acontep.Mensagens.Mensagens.ErroNovoEscopoRequerido">
+            <summary>
+              Looks up a localized string similar to A opção de escopo da transação requer um novo escopo de execução..
+            </summary>
+        </member>
+        <member name="P:Acontep.Mensagens.Mensagens.ErroTipoDadoAplicacaoInvalido">
+            <summary>
+              Looks up a localized string similar to O tipo de dado informado é invalido para a {0}.
+            </summary>
+        </member>
+        <member name="P:Acontep.Mensagens.Mensagens.ErroTransacaoRequerNovoEscopo">
+            <summary>
+              Looks up a localized string similar to Não é possível iniciar uma nova transação se já existir um escopo, favor selecionar OpcaoEscopo.RequerNovo.
+            </summary>
+        </member>
+        <member name="P:Acontep.Mensagens.Mensagens.ErroValorNulo">
+            <summary>
+              Looks up a localized string similar to O valor informado para {0} não pode ser nulo.
+            </summary>
+        </member>
+        <member name="T:Acontep.Net.Mail.AcontepSmtpClient">
+            <summary>
+            Cliente de SMTP extendido para as necessidades do Acontep
+            </summary>
+        </member>
+        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.Net.Mail.MailMessage)">
+            <summary>
+            Envia e-mial usando os paramteros passoa por mailMessage
+            </summary>
+            <param name="mailMesasge">e-mail a ser enviado</param>
+        </member>
+        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.Net.Mail.MailMessage,System.Net.Mail.SendCompletedEventHandler)">
+            <summary>
+            Envia e-mial usando os paramteros passoa por mailMessage 
+            com a possibilidade de chamada a evento apos o envio
+            </summary>
+            <param name="mailMesasge">e-mail a ser enviado</param>
+            <param name="sendCompleted">evento vinculado a ser disparado ao terminio do envio</param>
+        </member>
+        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.String)">
+            <summary>
+            Overload para uso facilitado da classe de Log
+            </summary>
+            <param name="mensagem">mensagem formatada para envio</param>
+        </member>
+        <member name="T:Acontep.AcontepException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acontep.AcontepException.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acontep.AcontepException.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Acontep.AcontepException.#ctor(System.String,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:Acontep.AcontepException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:Acontep.Seguranca.ContextoAutenticacao">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acontep.Seguranca.ContextoAutenticacao.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Acontep.Seguranca.ContextoAutenticacao.Principal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Acontep.Seguranca.ContextoAutenticacao.Identity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Acontep.Seguranca.ContextoAutenticacao.Name">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:Acontep.Seguranca.CriptSenha">
@@ -1807,6 +1968,217 @@
             </summary>
             <param name="pValor">Informa o valor que deve ser retornado por extenso.</param>
             <returns>Retorna com o valor pro extenso.</returns>		
+        </member>
+        <member name="T:Acontep.TipoErroContraint">
+            <summary>
+            Tipos de excessões
+            </summary>
+        </member>
+        <member name="F:Acontep.TipoErroContraint.FK_Insert">
+            <summary>
+            Violação de FK de insert.
+            </summary>
+        </member>
+        <member name="F:Acontep.TipoErroContraint.FK_Delete">
+            <summary>
+            Violação de Fk de delete.
+            </summary>
+        </member>
+        <member name="F:Acontep.TipoErroContraint.PrimaryKey">
+            <summary>
+            Violação de primary key.
+            </summary>
+        </member>
+        <member name="F:Acontep.TipoErroContraint.UniqueKey">
+            <summary>
+            Violação de Unique Key.
+            </summary>
+        </member>
+        <member name="F:Acontep.TipoErroContraint.Constraint">
+            <summary>
+            Violação de constraint. Ainda não está implementado.
+            </summary>
+        </member>
+        <member name="F:Acontep.TipoErroContraint.NA">
+            <summary>
+            Sem identificação de violação
+            </summary>
+        </member>
+        <member name="T:Acontep.TratamentoExcessao">
+            <summary>
+            Summary description for Excecoes
+            </summary>
+        </member>
+        <member name="M:Acontep.TratamentoExcessao.Tratar(System.Exception,System.String@)">
+            <summary>
+            Método para tratar a exceção
+            </summary>
+            <param name="excecao">Exceção</param>
+            <param name="mensagem"></param>
+            <returns>Indicativo se a exceção foi tratada com sucesso ou não</returns>
+        </member>
+        <member name="M:Acontep.TratamentoExcessao.TratarSqlException(System.Data.SqlClient.SqlException,System.String@)">
+            <summary>
+            Tratamento de exceções SqlException
+            </summary>
+            <param name="excecao"></param>
+            <param name="mensagem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.TratamentoExcessao.ObterMensagemConstrantPadrao(System.Data.SqlClient.SqlException)">
+            <summary>
+            Obtem (gera) a mensagem padrão para a exceção
+            </summary>
+            <param name="excecao">Exceção</param>
+            <returns>Mensagem padrão para a exceção</returns>
+        </member>
+        <member name="M:Acontep.TratamentoExcessao.ObterMensagemConstrant(System.String,Acontep.TipoErroContraint)">
+            <summary>
+            Recupera a mensagem armazenada no banco de dados para a constraint fornecida
+            Tabela: ConstrInfo
+            </summary>
+            <param name="constraint">Nome da constraint</param>
+            <returns>Mensagem da constraint</returns>
+            <param name="tipo">Tipo da constraint</param>
+        </member>
+        <member name="M:Acontep.TratamentoExcessao.ObterNomeConstraint(System.String,System.Int32)">
+            <summary>
+            Obtem o nome da constraint contido na mensagem da exceção
+            </summary>
+            <param name="message">Mensagem da exceção</param>
+            <param name="number">número da exceção retornado pelo Sql Server</param>
+            <returns></returns>
+        </member>
+        <member name="M:Acontep.TratamentoExcessao.ExtrairNomeConstraint(System.String,System.String,System.Char)">
+            <summary>
+            Extrai o nome da constraint
+            </summary>
+            <param name="inicioMensagem">parte inicial (fixa) da mensagem</param>
+            <param name="message">mensagem da exceção</param>
+            <param name="delimitador">delimitidor do nome da constraint na mensagem de exceção</param>
+            <returns></returns>
+        </member>
+        <member name="T:Acontep.Validacoes.CadastrosValidacao">
+            <summary>
+            Validacoes e testes de escopo geral
+            </summary>
+        </member>
+        <member name="M:Acontep.Validacoes.CadastrosValidacao.EhCEP(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acontep.Validacoes.CadastrosValidacao.EhTelefone(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acontep.Validacoes.CadastrosValidacao.ValidarCEP(System.Object,Acontep.Validacoes.ValidacaoEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acontep.Validacoes.CadastrosValidacao.ValidarTelefone(System.Object,Acontep.Validacoes.ValidacaoEventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Acontep.Validacoes.ValidacaoEventHandler">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Acontep.Validacoes.TipoValidacao">
+            <summary>
+            Tipos de validacoes aplicaveis em <see cref="T:Acontep.Validacoes.Validacao"/>
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.Requerido">
+            <summary>
+            Validar se existe um valor
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.ValorIgual">
+            <summary>
+            Validar se valor igual
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.ValorMinimo">
+            <summary>
+            Validar se o valor é maior que o valor minimo
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.ValorMaximo">
+            <summary>
+            Validar se o valor é menor que o valor maximo
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.ValorMinimoIgual">
+            <summary>
+            Validar se o valor é maior ou igual ao valor minimo
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.ValorMaximoIgual">
+            <summary>
+            Validar se o valor é menor ou igual ao valor maximo
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.ValorContido">
+            <summary>
+            Validar se o valor está contido mas não é igual aos valores do intervalo
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.ValorContidoInclusivo">
+            <summary>
+            Validar se o valor é menor ou igual aos valores do intervalo
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraIgual">
+            <summary>
+            Validar se a largura é igual
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraMinima">
+            <summary>
+            Validar se a largura é maior que a largura minima
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraMaxima">
+            <summary>
+            Validar se a largura é menor que a largura maxima
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraMinimaIgual">
+            <summary>
+            Validar se a largura é maior ou igual ao valor minima
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraMaximaIgual">
+            <summary>
+            Validar se a largura é menor ou igual ao valor maxima
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraContida">
+            <summary>
+            Validar se a largura está contida mas não é igual aos valores do intervalo
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.LarguraContidaInclusivo">
+            <summary>
+            Validar se a largura é menor ou igual aos valores do intervalo
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.Regex">
+            <summary>
+            Validacao usando expressao regular
+            </summary>
+        </member>
+        <member name="F:Acontep.Validacoes.TipoValidacao.Customizada">
+            <summary>
+            Validacao customizada
+            </summary>
         </member>
         <member name="T:Acontep.Validacoes.FiscalValidacao">
             <summary>
@@ -1881,6 +2253,97 @@
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
+        </member>
+        <member name="T:Acontep.Validacoes.ValidacaoDataSet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acontep.Validacoes.ValidacaoDataSet.#ctor(System.Data.DataSet)">
+            <summary>
+            
+            </summary>
+            <param name="owner"></param>
+        </member>
+        <member name="M:Acontep.Validacoes.ValidacaoDataSet.ObterValidacaoDataSet(System.Data.DataSet)">
+            <summary>
+            
+            </summary>
+            <param name="dataSet"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoDataSet.Item(System.Data.DataTable)">
+            <summary>
+            
+            </summary>
+            <param name="dataTable"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoDataSet.Item(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoDataSet.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="tableIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoDataSet.ValidacaoExtendProperty">
+            <summary>
+            Nome da propriedade extendida do <see cref="T:System.Data.DataSet"/> que contem
+            <c>ValidacaoDataTable</c>
+            </summary>
+        </member>
+        <member name="T:Acontep.Validacoes.ValidacaoResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroForaIntervaloExclusivo">
+            <summary>
+              Looks up a localized string similar to O valor informado para {0} deve estar entre {1} e {2}!.
+            </summary>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroForaIntervaloInclusivo">
+            <summary>
+              Looks up a localized string similar to O valor informado para {0} deve se maior ou igual a {1} e menor ou igual a {2}!.
+            </summary>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroFormatoDadoInvalido">
+            <summary>
+              Looks up a localized string similar to O valor informado para {0} possui um formato incorreto!.
+            </summary>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroTipoConversaoInvalida">
+            <summary>
+              Looks up a localized string similar to O valor informado para {0} não pode ser convertido..
+            </summary>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroTipoParaIntervaloValorInvalido">
+            <summary>
+              Looks up a localized string similar to O valor &apos;{0}&apos; do tipo &apos;{1}&apos; não é incompatível e nem pode ser convertido para um valor compatível com o tipo &apos;{2}&apos; configurado para essa instância..
+            </summary>
+        </member>
+        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroValorRequerido">
+            <summary>
+              Looks up a localized string similar to Informe um valor para {0}.
+            </summary>
         </member>
         <member name="T:Acontep.Validacoes.Validacao`1">
             <summary>
@@ -2427,314 +2890,30 @@
             <c>ValidacaoDataTable</c>
             </summary>
         </member>
-        <member name="T:Acontep.AcessoInvalidoException">
+        <member name="T:Acontep.Validacoes.ValidacaoEventArgs">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.AcessoInvalidoException.#ctor">
+        <member name="M:Acontep.Validacoes.ValidacaoEventArgs.#ctor(System.String,System.Object)">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.AcessoInvalidoException.#ctor(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="message"></param>
-        </member>
-        <member name="M:Acontep.AcessoInvalidoException.#ctor(System.String,System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="message"></param>
-            <param name="innerException"></param>
-        </member>
-        <member name="M:Acontep.AcessoInvalidoException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            
-            </summary>
-            <param name="info"></param>
-            <param name="context"></param>
-        </member>
-        <member name="T:Acontep.IO.HelpZip">
-            <summary>
-            Summary description for HelpZip.
-            </summary>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.ZipFile(System.String,System.String,System.Boolean)">
-            <summary>
-            Zipa um Arquivo ou um diretorio
-            </summary>
-            <param name="pOrigem">Informa um arquivo ou diretorio a ser zipado</param>
-            <param name="pArquivoDestino">Informa o nome do arquivo zipado</param>
-            <param name="MantarEstruturaPastas">Se true mantem a hierarquia original de pastas, caso contrario compacta tudo em um unico nivel no arquivo zipado</param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.ZipFile(System.String[],System.String)">
-            <summary>
-            Zipa os arquivos
-            </summary>
-            <param name="lstfilenames">lista de arquivos</param>
-            <param name="pArquivoDestino">arquivo de destino(arquivo compactado)</param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.ZipFile(System.String[],System.String,System.Boolean)">
-            <summary>
-            Zipa os arquivos
-            </summary>
-            <param name="lstfilenames">lista de arquivos</param>
-            <param name="pArquivoDestino">arquivo de destino(arquivo compactado)</param>
-            <param name="MantarEstruturaPastas">Mantem toda a estrutura de pasta onde os arquivos estão</param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.ZipFile(System.String,System.String)">
-            <summary>
-            Zipa um Arquivo ou um diretorio
-            </summary>
-            <param name="pOrigem">Informa um arquivo ou diretorio a ser zipado</param>
-            <param name="pArquivoDestino">Informa o nome do arquivo zipado</param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.ZipFile(System.IO.Stream,System.String,System.String)">
-            <summary>
-            Zipa os dados
-            </summary>
-            <param name="pDadosOrigem">Dados a serem compactados</param>
-            <param name="pNomeArquivoOrigem">Nome do aquivo atribuidos aso dados</param>
-            <param name="pNomeArquivoDestino">arquivo de destino(arquivo compactado)</param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.UnZip(System.String,System.String)">
-            <summary>
-            Desconpacta o arquivo
-            </summary>
-            <param name="pArquivoZipado">caminho ao arquivo a ser descompactado</param>
-            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.UnZip(System.String,System.String,System.Boolean)">
-            <summary>
-            Desconpacta o arquivo
-            </summary>
-            <param name="pArquivoZipado">caminho ao arquivo a ser descompactado</param>
-            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
-            <param name="mesmaPasta"></param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.UnZip(System.IO.FileStream,System.String)">
-            <summary>
-            Desconpacta o arquivo
-            </summary>
-            <param name="File">stream do arquivo a ser descompactado</param>
-            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.UnZip(System.IO.FileStream,System.Boolean,System.String)">
-            <summary>
-            Desconpacta o arquivo
-            </summary>
-            <param name="File">stream do arquivo a ser descompactado</param>
-            <param name="mesmaPasta">define se descompacta os ignorando a estrutura de pastas do arquivo compactado e colocando no <paramref name="pDiretorioDestino"/></param>
-            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.UnZip(System.IO.FileStream,System.String,System.Boolean)">
-            <summary>
-            Desconpacta o arquivo
-            </summary>
-            <param name="arquivo">stream do arquivo a ser descompactado</param>
-            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
-            <param name="CloseFile">define se o stream do arquivo deve ser fechado apos a descompactação</param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.UnZip(System.IO.FileStream,System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Desconpacta o arquivo
-            </summary>
-            <param name="arquivo"> stream do arquivo a ser descompactado</param>
-            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
-            <param name="CloseFile">define se o stream do arquivo deve ser fechado apos a descompactação</param>
-            <param name="mesmaPasta">define se descompacta os ignorando a estrutura de pastas do arquivo compactado e colocando no <paramref name="pDiretorioDestino"/> </param>
-        </member>
-        <member name="M:Acontep.IO.HelpZip.UnZipCCFV(System.String,System.String)">
-            <summary>
-            Desconpacta o arquivo
-            </summary>
-            <param name="pArquivoZipado">caminho ao arquivo a ser descompactado</param>
-            <param name="pDiretorioDestino">diretorio de destino dos arquivos descompactados</param>
-        </member>
-        <member name="T:Acontep.AcessoDados">
+        <member name="P:Acontep.Validacoes.ValidacaoEventArgs.Valor">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.AcessoDados.#ctor">
+        <member name="P:Acontep.Validacoes.ValidacaoEventArgs.RotuloMensagemErro">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.AcessoDados.QuandoIniciando">
+        <member name="P:Acontep.Validacoes.ValidacaoEventArgs.MensagemErro">
             <summary>
             
             </summary>
-        </member>
-        <member name="E:Acontep.AcessoDados.Iniciando">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:Acontep.Net.Mail.AcontepSmtpClient">
-            <summary>
-            Cliente de SMTP extendido para as necessidades do Acontep
-            </summary>
-        </member>
-        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.Net.Mail.MailMessage)">
-            <summary>
-            Envia e-mial usando os paramteros passoa por mailMessage
-            </summary>
-            <param name="mailMesasge">e-mail a ser enviado</param>
-        </member>
-        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.Net.Mail.MailMessage,System.Net.Mail.SendCompletedEventHandler)">
-            <summary>
-            Envia e-mial usando os paramteros passoa por mailMessage 
-            com a possibilidade de chamada a evento apos o envio
-            </summary>
-            <param name="mailMesasge">e-mail a ser enviado</param>
-            <param name="sendCompleted">evento vinculado a ser disparado ao terminio do envio</param>
-        </member>
-        <member name="M:Acontep.Net.Mail.AcontepSmtpClient.Send(System.String)">
-            <summary>
-            Overload para uso facilitado da classe de Log
-            </summary>
-            <param name="mensagem">mensagem formatada para envio</param>
-        </member>
-        <member name="T:Acontep.Dado.ContextoAcessoDado">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Acontep.Dado.ContextoAcessoDado.#ctor(System.Data.Common.DbProviderFactory,System.String)">
-            <summary>
-            Construtor usando configuração de string de conexao customizada, independente de app.config
-            </summary>
-            <param name="providerFactory">Provider a ser usado</param>
-            <param name="connectionString">String de conexao</param>
-        </member>
-        <member name="M:Acontep.Dado.ContextoAcessoDado.#ctor(System.String,System.String)">
-            <summary>
-            Construtor usando configuração de string de conexao customizada, independente de app.config
-            </summary>
-            <param name="providerName">Nome do provider a ser usado</param>
-            <param name="connectionString">String de conexao</param>
-        </member>
-        <member name="M:Acontep.Dado.ContextoAcessoDado.#ctor(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="connectionStringSettingName"></param>
-        </member>
-        <member name="M:Acontep.Dado.ContextoAcessoDado.#ctor">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Acontep.Dado.ContextoAcessoDado.Dispose(System.Boolean)">
-            <summary>
-            Libera recursos envolvidos
-            </summary>
-            <param name="disposing">Indica se o metodo esta sendo chamado por dispose ou pelo finalizador</param>
-        </member>
-        <member name="P:Acontep.Dado.ContextoAcessoDado.ConnectionStringSettingName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Acontep.Dado.ContextoAcessoDado.Connection">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Acontep.Dado.ContextoAcessoDado.Transaction">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Acontep.Dado.ContextoAcessoDado.ProviderFactory">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Acontep.Dado.ContextoAcessoDado.MensagemErroObjectDisposedException">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:Acontep.IO.FileHelper">
-            <summary>
-            Classe utilitária para o gerenciamento de arquivos no Acontep
-            </summary>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioTransfer">
-            <summary>
-            Retorna o diretorio onde estão guardados os arquivos para transferência.
-            Todos os arquivos nessa pasta estão passíveis de um "delete".
-            Caso não exista, é criado o diretório.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioTransfer(System.String)">
-            <summary>
-            Retorna o diretorio onde estão guardados os arquivos para transferência.
-            Todos os arquivos nessa pasta estão passíveis de um "delete".
-            Caso não exista, é criado o diretório.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioSistemas(System.Int32)">
-            <summary>
-            Retorna o diretorio onde estão guardados os arquivos de cada sistema.
-            Todos os arquivos nessa pasta sofreão backup.
-            Caso não exista, é criado o diretório.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioSistemas(System.Int32,System.String)">
-            <summary>
-            Retorna o diretorio onde estão guardados os arquivos de cada sistema.
-            Todos os arquivos nessa pasta sofreão backup.
-            Caso não exista, é criado o diretório.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.ObterPathRepositorioTabelas(System.String)">
-            <summary>
-            Retorna o diretorio onde estão guardados os arquivos de cada tabela. Por padrão, o nome do arquivo será o ID do registro da tabela.
-            Todos os arquivos nessa pasta sofreão backup.
-            Caso não exista, é criado o diretório.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.ObterPathArquivo(System.String,System.Int32)">
-            <summary>
-            Retorna o path do arquivo. Caso não exista, retorna nulo.
-            </summary>
-            <param name="tabela">The tabela.</param>
-            <param name="id">The id.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.ApagarArquivo(System.String,System.Int32)">
-            <summary>
-            Apaga o arquivo caso ele exista
-            </summary>
-            <param name="tabela">nome da tabela</param>
-            <param name="id">id da tabela</param>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.AtualizarArquivo(System.String,System.Int32,System.String,System.Byte[])">
-            <summary>
-            Atualizar o arquivo (apaga se ele existir e inclui o novo arquivo)
-            </summary>
-            <param name="tabela">nome da tabela</param>
-            <param name="id">id do arquivo</param>
-            <param name="original_fileName"></param>
-            <param name="conteudo"></param>
-        </member>
-        <member name="M:Acontep.IO.FileHelper.CriarPathSeNaoExitir(System.String)">
-            <summary>
-            Cria o diretório para a tabela caso ele não exista
-            </summary>
-            <param name="path"></param>
         </member>
         <member name="T:Acontep.Validacoes.ValidacaoUtil">
             <summary>
@@ -2780,204 +2959,30 @@
             <seealso cref="M:Acontep.Validacoes.ValidacaoUtil.DeDataTable(System.Data.DataTable)"/>
             <param name="dataSet"><see cref="T:System.Data.DataSet"/> de onde se vai gerar as instancias de <see cref="T:Acontep.Validacoes.Validacao"/> para cada <see cref="T:System.Data.DataColumn"/> em cada <see cref="T:System.Data.DataTable"/></param>
         </member>
-        <member name="T:Acontep.Validacoes.ValidacaoResource">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoResource.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoResource.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroForaIntervaloExclusivo">
-            <summary>
-              Looks up a localized string similar to O valor informado para {0} deve estar entre {1} e {2}!.
-            </summary>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroForaIntervaloInclusivo">
-            <summary>
-              Looks up a localized string similar to O valor informado para {0} deve se maior ou igual a {1} e menor ou igual a {2}!.
-            </summary>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroFormatoDadoInvalido">
-            <summary>
-              Looks up a localized string similar to O valor informado para {0} possui um formato incorreto!.
-            </summary>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroTipoConversaoInvalida">
-            <summary>
-              Looks up a localized string similar to O valor informado para {0} não pode ser convertido..
-            </summary>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroTipoParaIntervaloValorInvalido">
-            <summary>
-              Looks up a localized string similar to O valor &apos;{0}&apos; do tipo &apos;{1}&apos; não é incompatível e nem pode ser convertido para um valor compatível com o tipo &apos;{2}&apos; configurado para essa instância..
-            </summary>
-        </member>
-        <member name="P:Acontep.Validacoes.ValidacaoResource.ErroValorRequerido">
-            <summary>
-              Looks up a localized string similar to Informe um valor para {0}.
-            </summary>
-        </member>
-        <member name="T:Acontep.Diagnostico.Log">
+        <member name="T:Acontep.Validacoes.ValorInvalidoException">
             <summary>
             
             </summary>
         </member>
-        <member name="M:Acontep.Diagnostico.Log.DetalhesGeral(System.String)">
+        <member name="M:Acontep.Validacoes.ValorInvalidoException.#ctor">
             <summary>
             
             </summary>
-            <param name="mensagem"></param>
         </member>
-        <member name="M:Acontep.Diagnostico.Log.AvisoGeral(System.String)">
+        <member name="M:Acontep.Validacoes.ValorInvalidoException.#ctor(System.String)">
             <summary>
             
             </summary>
-            <param name="mensagem"></param>
         </member>
-        <member name="M:Acontep.Diagnostico.Log.InfoGeral(System.String)">
+        <member name="M:Acontep.Validacoes.ValorInvalidoException.#ctor(System.String,System.Exception)">
             <summary>
             
             </summary>
-            <param name="mensagem"></param>
         </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroGeral(System.String)">
+        <member name="M:Acontep.Validacoes.ValorInvalidoException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
             <summary>
             
             </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroGeral(System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="exception"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroGeral(System.String,System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="cabecalho"></param>
-            <param name="exception"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.DetalhesDebugBiblioteca(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.AvisoDebugBiblioteca(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.InfoDebugBiblioteca(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugBiblioteca(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugBiblioteca(System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="exception"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugBiblioteca(System.String,System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="cabecalho"></param>
-            <param name="exception"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.DetalhesDebugNg(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.AvisoDebugNg(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.InfoDebugNg(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugNg(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugNg(System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="exception"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugNg(System.String,System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="cabecalho"></param>
-            <param name="exception"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.DetalhesDebugUI(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.AvisoDebugUI(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.InfoDebugUI(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugUI(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="mensagem"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugUI(System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="exception"></param>
-        </member>
-        <member name="M:Acontep.Diagnostico.Log.ErroDebugUI(System.String,System.Exception)">
-            <summary>
-            
-            </summary>
-            <param name="cabecalho"></param>
-            <param name="exception"></param>
         </member>
     </members>
 </doc>
