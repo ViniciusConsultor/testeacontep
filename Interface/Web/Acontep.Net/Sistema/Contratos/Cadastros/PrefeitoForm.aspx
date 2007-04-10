@@ -136,7 +136,7 @@
                                 Cidade:</td>
                             <td>
                                 <asp:DropDownList ID="ddlCidade" runat="server" DataSourceID="odsCidade" DataTextField="Nome"
-                                    DataValueField="IDCidade" AppendDataBoundItems="True" OnDataBinding="NenhumItemSelecionado" SelectedValue='<%# Bind("IDCidade") %>'>
+                                    DataValueField="IDCidade" AppendDataBoundItems="True" OnDataBinding="NenhumItemSelecionado">
                                 </asp:DropDownList><asp:ObjectDataSource ID="odsCidade" runat="server" OldValuesParameterFormatString="original_{0}"
                                     SelectMethod="ObterPor_IX_Municipio" TypeName="Acontep.AD.Cadastros.MunicipioAD">
                                     <SelectParameters>
@@ -284,7 +284,7 @@
                                 Cidade:</td>
                             <td>
                                 <asp:DropDownList ID="ddlCidade" runat="server" DataSourceID="odsCidade" DataTextField="Nome"
-                                    DataValueField="IDCidade" AppendDataBoundItems="True" OnDataBinding="NenhumItemSelecionado" SelectedValue='<%# Eval("IDCidade") %>' OnDataBound="ddlCidade_DataBound">
+                                    DataValueField="IDCidade" AppendDataBoundItems="True" OnDataBinding="NenhumItemSelecionado" OnDataBound="ddlCidade_DataBound">
                                 </asp:DropDownList><asp:ObjectDataSource ID="odsCidade" runat="server" OldValuesParameterFormatString="original_{0}"
                                     SelectMethod="ObterPor_IX_Municipio" TypeName="Acontep.AD.Cadastros.MunicipioAD">
                                     <SelectParameters>

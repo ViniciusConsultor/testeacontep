@@ -63,6 +63,7 @@ public partial class Sistema_Contratos_Cadastros_PrefeitoForm : System.Web.UI.Pa
     protected void odsManutencao_Inserting(object sender, ObjectDataSourceMethodEventArgs e)
     {
         e.InputParameters["CEP"] = Formatacao.RemoverFormatacaoCep(FormUtil.ObterControle<MaskedTextBox>(fvwItem.Controls, "tbxCep").Text);
+        e.InputParameters["IDCidade"] = FormUtil.ObterControle<DropDownList>(fvwItem.Controls, "ddlCidade").SelectedValue;
     }
     protected void btnExcluir_Click(object sender, EventArgs e)
     {
