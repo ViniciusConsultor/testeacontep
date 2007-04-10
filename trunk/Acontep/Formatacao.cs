@@ -9,6 +9,14 @@ namespace Acontep
     /// </summary>
     public static class Formatacao
     {
+
+        #region Constantes
+
+        /// <summary>
+        /// Retorna a máscara para o plano de trabalho que deverá ser utilizada no MaskedTextBox
+        /// </summary>
+        public static readonly string MascaraPlanoTrabalho = "999.999-99/9999";
+        #endregion
         /// <summary>
         /// Formata um valor para a mascara de CPF. Caso o tipo não seja identificado, ele retorna o próprio valor.
         /// </summary>
