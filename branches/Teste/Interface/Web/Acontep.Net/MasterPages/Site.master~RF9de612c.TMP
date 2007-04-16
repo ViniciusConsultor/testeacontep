@@ -1,0 +1,150 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+            <tr>
+                <td bgcolor="#eeeeee" colspan="2" style="vertical-align: top">
+                    <asp:LoginView ID="lvwUsuario" runat="server">
+                        <AnonymousTemplate>
+                            <table border="0" style="corareausuario" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="lblVisitante" runat="server" Font-Bold="True" SkinID="Login" Text="Visitante"></asp:Label>
+                                    </td>
+                                    <td style="text-align: right; height: 21px;">
+                                        <asp:LoginStatus ID="lssEntrar" runat="server" EnableViewState="False" LoginText="Entrar"
+                                            LogoutText="Sair" />
+                                        <asp:ImageButton ID="ibnEntrar" runat="server" ImageUrl="~/App_Themes/GrupoConstancioVieira/Imagens/but_entrar_semfundo.gif"
+                                            OnClick="ibnEntrar_Click" CausesValidation="False" EnableTheming="False" EnableViewState="False"
+                                            ImageAlign="AbsMiddle" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <table border="0" style="corareausuario" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="height: 21px">
+                                        <asp:Label ID="lblNome" runat="server" Font-Bold="True" SkinID="Login" Text="Nome: "></asp:Label>
+                                        <asp:Label ID="lblLogin" runat="server" Font-Bold="True" SkinID="Login" Text='<%# NomeUsuario %>'>
+                                        </asp:Label>
+                                    </td>
+                                    <td style="text-align: right; height: 21px;">
+                                        <asp:LoginStatus ID="lssSair" runat="server" EnableViewState="False" LoginText="Entrar"
+                                            LogoutText="Sair" OnLoggingOut="lssSair_LoggingOut" />
+                                        &nbsp;<asp:ImageButton ID="ibnSair" runat="server" ImageAlign="AbsMiddle" ImageUrl="~/App_Themes/GrupoConstancioVieira/Imagens/but_sair_semfundo.gif"
+                                            OnClick="ibnSair_Click" CausesValidation="False" EnableTheming="False" EnableViewState="False" />&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:LinkButton ID="lbnSistema" runat="server" SkinID="SiteMapPath">Sistema</asp:LinkButton>SistemaEmpresarial Constâncio Vieira
+                </td>
+                <td>
+                    <asp:SiteMapPath ID="smpModuloFuncao" runat="server" SiteMapProvider="ModuloFuncaoSiteMap"
+                        Font-Names="Verdana" Font-Size="0.8em" ParentLevelsDisplayed="1" EnableViewState="False"
+                        SkinID="ModuloFuncao">
+                    </asp:SiteMapPath>
+                    <%--
+                        <asp:LinkButton ID="lbnModulo" runat="server">Modulo</asp:LinkButton>
+                        <asp:LinkButton ID="lbnFuncao" runat="server">Função</asp:LinkButton>                        
+                        --%>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:LoginView ID="lvwSistemaPlanta" runat="server" EnableViewState="False">
+                        <LoggedInTemplate>
+                            <asp:TreeView ID="tvwSistemaPlanta" runat="server" DataSourceID="smdSistemaPlanta"
+                                EnableViewState="False">
+                            </asp:TreeView>
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+                </td>
+                <td>
+                    <asp:LoginView ID="lvwMenu" runat="server">
+                        <LoggedInTemplate>
+                            <asp:Menu ID="mnuModuloFuncao" DataSourceID="smdModuloFuncao" runat="server" EnableViewState="False"
+                                Font-Bold="True" Font-Names="Verdana" Font-Size="12px" ForeColor="White" Orientation="Horizontal"
+                                ScrollDownText="Descer" ScrollUpText="Subir" StaticSubMenuIndent="" StaticEnableDefaultPopOutImage="False"
+                                StaticItemFormatString="{0}">
+                                <DynamicHoverStyle BackColor="#AE3A00" ForeColor="White" />
+                                <DynamicMenuStyle BackColor="#8C0001" CssClass="tituloGrid" />
+                                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BorderColor="#E0E0E0"
+                                    BorderWidth="1px" />
+                                <StaticHoverStyle BackColor="#8C0001" ForeColor="White" />
+                                <StaticItemTemplate>
+                                    <div style="text-decoration: none">
+                                        &nbsp;<img id="Img1" runat="server" src="~/App_Themes/GrupoConstancioVieira/Imagens/Menu/icone_menu.gif"
+                                            border="0" style="vertical-align: middle" />
+                                        <%# Eval("Text", "{0}") %>
+                                        &nbsp;
+                                        <img id="Img6" runat="server" src="~/App_Themes/GrupoConstancioVieira/Imagens/Menu/separacao_menu_sistemas.jpg"
+                                            border="0" style="vertical-align: middle" />
+                                    </div>
+                                </StaticItemTemplate>
+                                <DynamicItemTemplate>
+                                    <img id="Img1" runat="server" src="~/App_Themes/GrupoConstancioVieira/Imagens/Menu/setaMenu.gif"
+                                        border="0" style="vertical-align: middle" />
+                                    <%# Eval("Text") %>
+                                </DynamicItemTemplate>
+                            </asp:Menu>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </td>
+            </tr>
+            <tr>
+                <td style="height: 19px" colspan="2">
+                    &nbsp;<asp:Label ID="lblMsg" runat="server" SkinID="TituloCampo" Height="19px"></asp:Label></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="height: 19px">
+                                <asp:ContentPlaceHolder ID="cphPrincipal" runat="server">
+                                </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0" width="<%=Convert.ToInt32(WidthFuncao)-21%>px"
+            style="height: 100%">
+            <tr>
+                <td id="colunaSistema" style="width: 182px; vertical-align: top;" background="<%=UrlTema%>/repeat_baixo_menu.jpg">
+                    &nbsp;</td>
+                <td id="colunaConteudo" style="height: 100%; width: 100%" bgcolor="#eeeeee">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                    <asp:Label ID="lblAviso" runat="server" SkinID="MenssagemAviso"></asp:Label>
+                    <br />
+                    <asp:Label ID="lblErro" runat="server" SkinID="MenssagemErro"></asp:Label></td>
+            </tr>
+        </table>
+        <asp:SiteMapDataSource ID="smdSistemaPlanta" runat="server" SiteMapProvider="SistemaPlantaSiteMap"
+            ShowStartingNode="False" />
+        <asp:SiteMapDataSource ID="smdModuloFuncao" runat="server" SiteMapProvider="ModuloFuncaoSiteMap"
+            ShowStartingNode="False" />
+    </form>
+    <!--
+    <map runat="server" name="Map4" id="Map4">        
+        <area id="area1" alt="Fechar Menu" coords="166,66,186,91" href="javascript:esconderMenu()"  shape="rect" />        
+    </map>
+    <script type="text/javascript">
+esconderMenu(true);
+// 
+</script>-->
+</body>
+</html>

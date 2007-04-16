@@ -1,0 +1,81 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Secv.RAD.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CamposTransacionais" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">dathor;datinc;usutra;usuinc</Value>
+    </Setting>
+    <Setting Name="DiretororioPadrao" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\Acontep\SisAcontep\trunk\IMPLEMENTACAO\Negocio\</Value>
+    </Setting>
+    <Setting Name="NameSpaceDefault" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Acontep.AD</Value>
+    </Setting>
+    <Setting Name="TerminacaoClasse" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AD</Value>
+    </Setting>
+    <Setting Name="MetodoGetUser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">System.Threading.Thread.CurrentPrincipal.Identity.Name</Value>
+    </Setting>
+    <Setting Name="NomeDefaultMetodoDelete" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Apagar</Value>
+    </Setting>
+    <Setting Name="NomeDefaultMetodoUpdate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Alterar</Value>
+    </Setting>
+    <Setting Name="NomeDefaultMetodoInsert" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Inserir</Value>
+    </Setting>
+    <Setting Name="NomeDefaultMetodoSelect" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Obter</Value>
+    </Setting>
+    <Setting Name="NomeDefaultMetodoSelectComParametros" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ObterPor_</Value>
+    </Setting>
+    <Setting Name="NomePrefixoCamposManutencao" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">original_</Value>
+    </Setting>
+    <Setting Name="MetodoAdicionarParametro" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AdicionarParametro</Value>
+    </Setting>
+    <Setting Name="SimboloParametro" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">@</Value>
+    </Setting>
+    <Setting Name="SimboloParametroSQL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">@</Value>
+    </Setting>
+    <Setting Name="ClasseConsultaBanco" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BdUtil</Value>
+    </Setting>
+    <Setting Name="MetodoObterDataTable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ObterDataTable</Value>
+    </Setting>
+    <Setting Name="MetodoExecuteScalar" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ExecuteScalar</Value>
+    </Setting>
+    <Setting Name="MetodoExecuteNonQuery" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ExecuteNonQuery</Value>
+    </Setting>
+    <Setting Name="NameSpaceClasseDado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Acontep.Dado</Value>
+    </Setting>
+    <Setting Name="UsarNullEmLike" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SimboloCoringaParaLike" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">'%'</Value>
+    </Setting>
+    <Setting Name="SimboloJuncaoString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+</Value>
+    </Setting>
+    <Setting Name="UsarSimboloCoringaParaLike" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="StringConexao" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</Value>
+    </Setting>
+    <Setting Name="BancoSQL" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

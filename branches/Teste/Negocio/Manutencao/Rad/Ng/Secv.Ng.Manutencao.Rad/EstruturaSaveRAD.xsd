@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EstruturaSaveRAD" targetNamespace="http://tempuri.org/EstruturaSaveRAD.xsd" xmlns:mstns="http://tempuri.org/EstruturaSaveRAD.xsd" xmlns="http://tempuri.org/EstruturaSaveRAD.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EstruturaSaveRAD" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="EstruturaSaveRAD" msprop:Generator_DataSetName="EstruturaSaveRAD">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ListaCampos" msprop:Generator_UserTableName="ListaCampos" msprop:Generator_RowDeletedName="ListaCamposRowDeleted" msprop:Generator_RowChangedName="ListaCamposRowChanged" msprop:Generator_RowClassName="ListaCamposRow" msprop:Generator_RowChangingName="ListaCamposRowChanging" msprop:Generator_RowEvArgName="ListaCamposRowChangeEvent" msprop:Generator_RowEvHandlerName="ListaCamposRowChangeEventHandler" msprop:Generator_TableClassName="ListaCamposDataTable" msprop:Generator_TableVarName="tableListaCampos" msprop:Generator_RowDeletingName="ListaCamposRowDeleting" msprop:Generator_TablePropName="ListaCampos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IDMetodo" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="IDMetodo" msprop:Generator_ColumnPropNameInRow="IDMetodo" msprop:Generator_ColumnVarNameInTable="columnIDMetodo" msprop:Generator_ColumnPropNameInTable="IDMetodoColumn" type="xs:string" />
+              <xs:element name="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_ColumnVarNameInTable="columnNome" msprop:Generator_ColumnPropNameInTable="NomeColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MetodoConsulta" msprop:Generator_UserTableName="MetodoConsulta" msprop:Generator_RowDeletedName="MetodoConsultaRowDeleted" msprop:Generator_RowChangedName="MetodoConsultaRowChanged" msprop:Generator_RowClassName="MetodoConsultaRow" msprop:Generator_RowChangingName="MetodoConsultaRowChanging" msprop:Generator_RowEvArgName="MetodoConsultaRowChangeEvent" msprop:Generator_RowEvHandlerName="MetodoConsultaRowChangeEventHandler" msprop:Generator_TableClassName="MetodoConsultaDataTable" msprop:Generator_TableVarName="tableMetodoConsulta" msprop:Generator_RowDeletingName="MetodoConsultaRowDeleting" msprop:Generator_TablePropName="MetodoConsulta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SQL" msprop:Generator_UserColumnName="SQL" msprop:Generator_ColumnPropNameInRow="SQL" msprop:Generator_ColumnVarNameInTable="columnSQL" msprop:Generator_ColumnPropNameInTable="SQLColumn" type="xs:string" />
+              <xs:element name="NomeConsulta" msprop:Generator_UserColumnName="NomeConsulta" msprop:Generator_ColumnPropNameInRow="NomeConsulta" msprop:Generator_ColumnVarNameInTable="columnNomeConsulta" msprop:Generator_ColumnPropNameInTable="NomeConsultaColumn" type="xs:string" />
+              <xs:element name="String" msprop:Generator_UserColumnName="String" msprop:Generator_ColumnPropNameInRow="String" msprop:Generator_ColumnVarNameInTable="columnString" msprop:Generator_ColumnPropNameInTable="StringColumn" type="xs:string" />
+              <xs:element name="Provider" msprop:Generator_UserColumnName="Provider" msprop:Generator_ColumnPropNameInRow="Provider" msprop:Generator_ColumnVarNameInTable="columnProvider" msprop:Generator_ColumnPropNameInTable="ProviderColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ClasseCRUD" msprop:Generator_UserTableName="ClasseCRUD" msprop:Generator_RowDeletedName="ClasseCRUDRowDeleted" msprop:Generator_RowChangedName="ClasseCRUDRowChanged" msprop:Generator_RowClassName="ClasseCRUDRow" msprop:Generator_RowChangingName="ClasseCRUDRowChanging" msprop:Generator_RowEvArgName="ClasseCRUDRowChangeEvent" msprop:Generator_RowEvHandlerName="ClasseCRUDRowChangeEventHandler" msprop:Generator_TableClassName="ClasseCRUDDataTable" msprop:Generator_TableVarName="tableClasseCRUD" msprop:Generator_RowDeletingName="ClasseCRUDRowDeleting" msprop:Generator_TablePropName="ClasseCRUD">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" />
+              <xs:element name="Tabela" msprop:Generator_UserColumnName="Tabela" msprop:Generator_ColumnPropNameInRow="Tabela" msprop:Generator_ColumnVarNameInTable="columnTabela" msprop:Generator_ColumnPropNameInTable="TabelaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Opcoes" msprop:Generator_UserColumnName="Opcoes" msprop:Generator_ColumnPropNameInRow="Opcoes" msprop:Generator_ColumnVarNameInTable="columnOpcoes" msprop:Generator_ColumnPropNameInTable="OpcoesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NomeClasse" msprop:Generator_UserColumnName="NomeClasse" msprop:Generator_ColumnPropNameInRow="NomeClasse" msprop:Generator_ColumnVarNameInTable="columnNomeClasse" msprop:Generator_ColumnPropNameInTable="NomeClasseColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Provider" msprop:Generator_UserColumnName="Provider" msprop:Generator_ColumnPropNameInRow="Provider" msprop:Generator_ColumnVarNameInTable="columnProvider" msprop:Generator_ColumnPropNameInTable="ProviderColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="StringConexao" msprop:Generator_UserColumnName="StringConexao" msprop:Generator_ColumnPropNameInRow="StringConexao" msprop:Generator_ColumnVarNameInTable="columnStringConexao" msprop:Generator_ColumnPropNameInTable="StringConexaoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NameSpace" msprop:Generator_UserColumnName="NameSpace" msprop:Generator_ColumnPropNameInRow="NameSpace" msprop:Generator_ColumnVarNameInTable="columnNameSpace" msprop:Generator_ColumnPropNameInTable="NameSpaceColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Metodo" msprop:Generator_UserTableName="Metodo" msprop:Generator_RowDeletedName="MetodoRowDeleted" msprop:Generator_RowChangedName="MetodoRowChanged" msprop:Generator_RowClassName="MetodoRow" msprop:Generator_RowChangingName="MetodoRowChanging" msprop:Generator_RowEvArgName="MetodoRowChangeEvent" msprop:Generator_RowEvHandlerName="MetodoRowChangeEventHandler" msprop:Generator_TableClassName="MetodoDataTable" msprop:Generator_TableVarName="tableMetodo" msprop:Generator_RowDeletingName="MetodoRowDeleting" msprop:Generator_TablePropName="Metodo" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" minOccurs="0" />
+                    <xs:element name="Opcoes" msprop:Generator_UserColumnName="Opcoes" msprop:Generator_ColumnPropNameInRow="Opcoes" msprop:Generator_ColumnVarNameInTable="columnOpcoes" msprop:Generator_ColumnPropNameInTable="OpcoesColumn" type="xs:string" minOccurs="0" />
+                    <xs:element name="NomeMetodo" msprop:Generator_UserColumnName="NomeMetodo" msprop:Generator_ColumnPropNameInRow="NomeMetodo" msprop:Generator_ColumnVarNameInTable="columnNomeMetodo" msprop:Generator_ColumnPropNameInTable="NomeMetodoColumn" type="xs:string" minOccurs="0" />
+                    <xs:element name="IDClasse" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="IDClasse" msprop:Generator_ColumnPropNameInRow="IDClasse" msprop:Generator_ColumnVarNameInTable="columnIDClasse" msprop:Generator_ColumnPropNameInTable="IDClasseColumn" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Versao" msprop:Generator_UserTableName="Versao" msprop:Generator_RowDeletedName="VersaoRowDeleted" msprop:Generator_TableClassName="VersaoDataTable" msprop:Generator_RowChangedName="VersaoRowChanged" msprop:Generator_RowClassName="VersaoRow" msprop:Generator_RowChangingName="VersaoRowChanging" msprop:Generator_RowEvArgName="VersaoRowChangeEvent" msprop:Generator_RowEvHandlerName="VersaoRowChangeEventHandler" msprop:Generator_TablePropName="Versao" msprop:Generator_TableVarName="tableVersao" msprop:Generator_RowDeletingName="VersaoRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Numero" msprop:Generator_UserColumnName="Numero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Usuario" msprop:Generator_UserColumnName="Usuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Maquina" msprop:Generator_UserColumnName="Maquina" msprop:Generator_ColumnPropNameInRow="Maquina" msprop:Generator_ColumnVarNameInTable="columnMaquina" msprop:Generator_ColumnPropNameInTable="MaquinaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Data" msprop:Generator_UserColumnName="Data" msprop:Generator_ColumnPropNameInRow="Data" msprop:Generator_ColumnVarNameInTable="columnData" msprop:Generator_ColumnPropNameInTable="DataColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:ListaCampos" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="MetodoConsulta_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:MetodoConsulta" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Metodo_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:Metodo" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ClasseCRUD_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:ClasseCRUD" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:keyref name="ClasseCRUD_Metodo" refer="ClasseCRUD_Constraint1" msdata:IsNested="true" msprop:rel_Generator_UserRelationName="ClasseCRUD_Metodo" msprop:rel_Generator_RelationVarName="relationClasseCRUD_Metodo" msprop:rel_Generator_UserChildTable="Metodo" msprop:rel_Generator_UserParentTable="ClasseCRUD" msprop:rel_Generator_ParentPropName="ClasseCRUDRow" msprop:rel_Generator_ChildPropName="GetMetodoRows" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:Metodo" />
+      <xs:field xpath="mstns:IDClasse" />
+    </xs:keyref>
+    <xs:keyref name="FK_Metodo_ListaCampos" refer="Metodo_Constraint1" msprop:rel_Generator_UserRelationName="FK_Metodo_ListaCampos" msprop:rel_Generator_RelationVarName="relationFK_Metodo_ListaCampos" msprop:rel_Generator_UserChildTable="ListaCampos" msprop:rel_Generator_UserParentTable="Metodo" msprop:rel_Generator_ParentPropName="MetodoRow" msprop:rel_Generator_ChildPropName="GetListaCamposRows" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:ListaCampos" />
+      <xs:field xpath="mstns:IDMetodo" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

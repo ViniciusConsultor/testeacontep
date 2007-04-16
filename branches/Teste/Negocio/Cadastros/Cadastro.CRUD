@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<EstruturaSaveRAD xmlns="http://tempuri.org/EstruturaSaveRAD.xsd">
+  <ClasseCRUD>
+    <ID>11873001-90a6-439d-b054-aa0cb7e36dba</ID>
+    <Tabela>Cadastros.Estado</Tabela>
+    <NomeClasse>EstadoAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+  <ClasseCRUD>
+    <ID>2270e42b-885c-47ad-a76c-813123ab1185</ID>
+    <Tabela>Cadastros.Municipio</Tabela>
+    <NomeClasse>MunicipioAD</NomeClasse>
+    <Provider>System.Data.SqlClient</Provider>
+    <StringConexao>Data Source=francisconb\sqlexpress;Initial Catalog=Acontep; Trusted_Connection = yes;</StringConexao>
+    <NameSpace>Acontep.AD.Cadastros</NameSpace>
+  </ClasseCRUD>
+</EstruturaSaveRAD>
