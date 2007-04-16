@@ -39,6 +39,7 @@
     <Compile Include="EmendaAD.Designer.cs" />
     <Compile Include="EmpreiteiraAD.cs" />
     <Compile Include="EmpreiteiraAD.Designer.cs" />
+    <Compile Include="PlanoTrabalhoAD.Designer.cs" />
     <Compile Include="PrefeitoAD.cs" />
     <Compile Include="PrefeitoAD.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

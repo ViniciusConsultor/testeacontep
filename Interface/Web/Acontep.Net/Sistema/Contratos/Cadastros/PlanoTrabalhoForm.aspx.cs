@@ -9,9 +9,14 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using Acontep;
+using Acontep.Manutencao.Seguranca;
 
 public partial class Sistema_Contratos_Cadastros_PlanoTrabalhoForm : System.Web.UI.Page
 {
+    protected void Page_PreInit(object sender, EventArgs e)
+    {
+        Permissao.ConfigAcessoFuncao("2");
+    }
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -40,5 +45,19 @@ public partial class Sistema_Contratos_Cadastros_PlanoTrabalhoForm : System.Web.
     protected void btnPesquisar_Click(object sender, EventArgs e)
     {
         gvwItem.DataBind();
+    }
+    protected void HabilitarEdicao(FormViewMode modo)
+    {
+        fvwItem.ChangeMode(modo);
+        pnlEdicao.Visible = modo != FormViewMode.ReadOnly;
+        pnlPesquisa.Visible = modo == FormViewMode.ReadOnly;
+    }
+    protected void btnIncluir_Click(object sender, EventArgs e)
+    {
+        HabilitarEdicao(FormViewMode.Insert);
+    }
+    protected void odsPesquisar_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
+    {
+        e.InputParameters["Data"] = tbxDataPesquisa.SelectedValue;
     }
 }
