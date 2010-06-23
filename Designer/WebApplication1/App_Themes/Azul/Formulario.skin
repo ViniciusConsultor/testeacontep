@@ -1,0 +1,88 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:Panel runat="server" CssClass="page-title ui-widget-content ui-corner-all" />
+<asp:Panel runat="server" SkinId="Titulo" CssClass="tituloPainel title"/>
+
+<asp:Panel runat="server" SkinId="FundoAmareloEscuro" CssClass="other-box yellow-box page-title ui-widget-content ui-corner-all" />
+
+<asp:Panel runat="server" SkinId="FundoCinza" CssClass="other-box gray-box page-title ui-widget-content ui-corner-all" />
+<asp:Panel runat="server" SkinId="FundoAzul" CssClass="FundoAzul ui-corner-all inf ui-corner-all" />
+<asp:Panel runat="server"  SkinId="FundoVermelho" CssClass="FundoVermelho ui-corner-all ui-corner-all" />
+<asp:Panel runat="server"  SkinId="FundoAmarelo" CssClass="FundoAmarelo ui-corner-all ui-corner-all" />        
+<asp:Panel runat="server"  SkinId="FundoVerde" CssClass="FundoVerde ui-corner-all ui-corner-all" />
+
+
+<asp:Panel runat="server" SkinId="Accordion" CssClass="portlet" />
+<asp:Panel runat="server" SkinId="Accordion-Titulo" CssClass="portlet-header" />
+<asp:Panel runat="server" SkinId="Accordion-Titulo-Fixo" CssClass="portlet-header-fixo" />
+<asp:Panel runat="server" SkinId="Accordion-Conteudo" CssClass="portlet-content" />
+
+
+
+
+<asp:TextBox runat="server" CssClass="field text small" />
+<asp:TextBox runat="server" SkinId="Micro" CssClass="field text" />
+<asp:TextBox runat="server" SkinId="Pequeno" CssClass="field text small" />
+<asp:TextBox runat="server" SkinId="Medio" CssClass="field text medium" />
+<asp:TextBox runat="server" SkinId="Grande" CssClass="field text large" />
+<asp:TextBox runat="server" SkinId="100%" CssClass="field text full" />
+
+<asp:TextBox runat="server" SkinId="Mlinha_Pequeno" CssClass="field textarea small" />
+
+<asp:Label  runat="server" SkinId="LabelDoCampo" CssClass="desc" /> 
+
+<asp:Button runat="server" CssClass="btn_no_image ui-state-default ui-corner-all" />
+
+<asp:LinkButton runat="server" CssClass="btn_no_image ui-state-default ui-corner-all" ></asp:LinkButton>
+<asp:LinkButton runat="server" SkinId="BotaoComImagem"
+    CssClass="btn ui-state-default ui-corner-all" ></asp:LinkButton> 
+
+<%--
+Botoes com imagens
+--%>
+<asp:LinkButton runat="server" SkinId="Avancar" CssClass="btnAvancar" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Voltar" CssClass="btnVoltar" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Atualizar" CssClass="btnAtualizar" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Relacionar" CssClass="btnRelacionar" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Localizar" CssClass="btnLocalizar" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Novo" CssClass="btnNovo" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Excluir" CssClass="btnExcluir" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Salvar" CssClass="btnSalvar" ></asp:LinkButton>
+<asp:LinkButton runat="server" SkinId="Confirmar" CssClass="btnConfirmar" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Cancelar" CssClass="btnCancelar" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Adicionar" CssClass="btnAdicionar" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Remover" CssClass="btnRemover" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Help" CssClass="btnHelp" ></asp:LinkButton> 
+<asp:LinkButton runat="server" SkinId="Info" CssClass="btnInfo" ></asp:LinkButton> 
+
+
+<asp:DropDownList runat=server SkinId="100%" CssClass="field select full" ></asp:DropDownList>
+<asp:DropDownList runat=server SkinId="Grande" CssClass="field select large" ></asp:DropDownList>
+<asp:DropDownList runat=server SkinId="Medio" CssClass="field select medium" ></asp:DropDownList>
+<asp:DropDownList runat=server SkinId="Pequeno" CssClass="field select" ></asp:DropDownList>
+<asp:DropDownList runat=server CssClass="field select small" ></asp:DropDownList>
+
+
+<asp:GridView runat="server" 
+    AllowPaging="true" 
+    AllowSorting="true"
+    CssClass="hastable" 
+    ShowHeaderWhenEmpty="True">
+    <HeaderStyle CssClass="header"></HeaderStyle>
+    <AlternatingRowStyle CssClass="odd" />
+    <RowStyle CssClass="even" />
+</asp:GridView>

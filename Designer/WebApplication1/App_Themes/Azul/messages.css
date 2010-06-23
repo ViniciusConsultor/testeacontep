@@ -1,0 +1,90 @@
+	/* Response Messages */
+
+.response-msg {
+	padding:6px 10px 10px 45px;
+	font-size:0.9em;
+	margin:0 0 10px;
+}
+
+.response-msg span {
+	display:block;
+	font-weight:bold;
+	padding:0 0 4px;
+}
+
+.error {
+	background:#f9e5e6 url('images/icons/error.png') 10px 50% no-repeat;
+	color:#b50007;
+	border:#e8aaad solid 1px;
+}
+.FundoVermelho {
+	background:#f9e5e6;
+	color:#b50007;
+	border:#e8aaad solid 1px;
+    margin:0 0 20px;
+    padding:10px;
+}
+
+.notice  {
+	background:#f9f9e5 url('images/icons/notice.png') 10px 50% no-repeat;
+	color:#828400 !important;
+	border:#e8e3aa solid 1px;
+}
+
+.FundoAmarelo {
+	background:#f9f9e5;
+	color:#828400 !important;
+	border:#e8e3aa solid 1px;
+	margin:0 0 20px;
+    padding:10px;
+}
+
+.inf {
+	background:#e5ecf9 url('images/icons/info.png') 10px 50% no-repeat;
+	color:#0055b5 !important;
+	border:#aac6e8 solid 1px;
+}
+.FundoAzul {
+	background:#e5ecf9;
+	color:#0055b5 !important;
+	border:#aac6e8 solid 1px;
+	margin:0 0 20px;
+    padding:10px;
+}
+.success {
+	background:#e9f9e5 url('images/icons/success.png') 10px 50% no-repeat;
+	color:#1c8400 !important;
+	border:#b4e8aa solid 1px;
+}
+.FundoVerde 
+{
+    background:#e9f9e5 ;
+	color:#1c8400 !important;
+	border:#b4e8aa solid 1px;
+	margin:0 0 20px;
+    padding:10px;
+}
+#page-wrapper .other-box {
+	margin:15px 0;
+}
+
+#page-wrapper .cont {
+	border-top:#fff solid 1px;
+	padding:8px;
+	line-height:1.4em;
+}
+
+#page-wrapper .other-box h3 {
+	font-size:1.2em;
+	font-weight:bold;
+}
+
+#page-wrapper .gray-box {
+	background:#eaeaea !important;
+	border:#c0c0c0 solid 1px;
+}
+
+#page-wrapper .yellow-box {
+	background:#fff6bf !important;
+	border:#fdd845 solid 1px;	
+}
