@@ -62,6 +62,8 @@
     <Content Include="App_Themes\Azul\Copy of js\tablesorter-pager.js" />
     <Content Include="App_Themes\Azul\Copy of js\tablesorter.js" />
     <Content Include="App_Themes\Azul\Copy of js\tooltip.js" />
+    <Content Include="App_Themes\Azul\jquery-ui-1.8.2.custom.css" />
+    <Content Include="App_Themes\Azul\Personalizacao.css" />
     <Content Include="Teste\Design.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />

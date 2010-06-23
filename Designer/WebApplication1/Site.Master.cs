@@ -77,7 +77,36 @@ namespace WebApplication1
 //    <script type="text/javascript" language="javascript" src="/cookie.js"></script>
 //    <script type="text/javascript" language="javascript" src="/custom.js"></script>
 
+          //  AjustarGrid();
 
         }
+
+        protected void AjustarGrid(ControlCollection controles)
+        {
+            //controles.OfType<GridView>().ToList().ForEach(c => c.HeaderRow.TableSection = TableRowSection.TableHeader);
+
+            foreach (Control c in controles)
+            {
+                if (c is GridView)
+                {
+                    GridView grid = ((GridView)c);
+                    grid.UseAccessibleHeader = true;
+                    if (grid.HeaderRow != null)
+                    {
+                        grid.HeaderRow.TableSection = TableRowSection.TableHeader;
+                    }
+                }
+                if (c.HasControls())
+                {
+                    AjustarGrid(c.Controls);
+                }
+            }
+        }
+
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            AjustarGrid(this.Controls);
+        }
+       
     }
 }

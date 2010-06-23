@@ -27,6 +27,7 @@ Default skin template. The following skins are provided as examples only.
 
 
 <asp:Panel runat="server" SkinId="Accordion" CssClass="portlet" />
+
 <asp:Panel runat="server" SkinId="Accordion-Titulo" CssClass="portlet-header" />
 <asp:Panel runat="server" SkinId="Accordion-Titulo-Fixo" CssClass="portlet-header-fixo" />
 <asp:Panel runat="server" SkinId="Accordion-Conteudo" CssClass="portlet-content" />
@@ -85,4 +86,5 @@ Botoes com imagens
     <HeaderStyle CssClass="header"></HeaderStyle>
     <AlternatingRowStyle CssClass="odd" />
     <RowStyle CssClass="even" />
+    <PagerStyle CssClass="pager" />
 </asp:GridView>

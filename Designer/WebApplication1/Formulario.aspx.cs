@@ -10,8 +10,10 @@ namespace WebApplication1
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             DataTable dt = new DataTable();
             dt.Columns.Add("Nome");
             dt.Columns.Add("email");
@@ -24,6 +26,9 @@ namespace WebApplication1
             GridView2.DataSource = dt.Clone();
             GridView1.DataBind();
             GridView2.DataBind();
+
+           
+
         }
     }
 }
