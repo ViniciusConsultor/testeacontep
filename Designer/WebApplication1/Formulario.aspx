@@ -9,12 +9,23 @@
         <asp:Panel runat="server" ID="Panel2" SkinID="Accordion-Titulo">
             Botões</asp:Panel>
         <asp:Panel runat="server" ID="Panel1" SkinID="Accordion-Conteudo">
-            <asp:LinkButton SkinID="Adicionar" ID="LinkButton2" Text="" runat="server"></asp:LinkButton>
-            <asp:LinkButton SkinID="Adicionar" ID="LinkButton3" Text="Adicionar" runat="server"></asp:LinkButton>
-            <asp:LinkButton SkinID="Atualizar" ID="LinkButton4" runat="server"></asp:LinkButton>
-            <asp:LinkButton SkinID="Atualizar" ID="btnAvancar" Text="Atualizar" runat="server"></asp:LinkButton>
-            <asp:LinkButton SkinID="Avancar" ID="LinkButton5" Text="" runat="server"></asp:LinkButton>
-            <asp:LinkButton SkinID="Avancar" ID="LinkButton6" Text="Avançar" runat="server"></asp:LinkButton>
+            <ul>
+                <li>
+                    <asp:LinkButton SkinID="Adicionar" ID="LinkButton2" Text="" runat="server"></asp:LinkButton>
+                    <asp:LinkButton SkinID="Adicionar" ID="LinkButton3" Text="Adicionar" runat="server"></asp:LinkButton>
+                </li>
+                <li>
+                    <asp:TextBox runat="server" ID="edsqsq" Text="Teste quebra de linha"> </asp:TextBox>
+                </li>
+                <li>
+                    <asp:LinkButton SkinID="Atualizar" ID="LinkButton4" runat="server"></asp:LinkButton>
+                    <asp:LinkButton SkinID="Atualizar" ID="btnAvancar" Text="Atualizar" runat="server"></asp:LinkButton>
+                </li>
+                <li>
+                    <asp:LinkButton SkinID="Avancar" ID="LinkButton5" Text="" runat="server"></asp:LinkButton>
+                    <asp:LinkButton SkinID="Avancar" ID="LinkButton6" Text="Avançar" runat="server"></asp:LinkButton>
+                </li>
+            </ul>
             <asp:LinkButton SkinID="Cancelar" ID="LinkButton7" runat="server"></asp:LinkButton>
             <asp:LinkButton SkinID="Cancelar" ID="LinkButton8" Text="Cancelar" runat="server"></asp:LinkButton>
             <asp:LinkButton SkinID="Confirmar" ID="LinkButton9" Text="" runat="server"></asp:LinkButton>

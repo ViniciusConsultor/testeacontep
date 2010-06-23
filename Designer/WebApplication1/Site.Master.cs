@@ -17,7 +17,8 @@ namespace WebApplication1
             //string[] scripts = Directory.GetFiles(MapPath("~/App_Themes/Azul/js"), "*.js", SearchOption.AllDirectories);
             
             string[] scripts = new string[]{
-                 "jquery-1.3.2.js"
+                 //"jquery-1.3.2.js"
+                "jquery-1.4.2.js"
                 ,"superfish.js"
                 ,"jquery-ui-1.7.2.js"
                 ,"tooltip.js"

@@ -1,0 +1,32 @@
+@import "pngfix.js";
+
+/* Buttons, submit inputs */
+input.btn, a.btn {
+	padding: .5em .4em .5em 20px;
+	position:relative;
+	min-height:13px;
+}
+
+input.btn_no_image
+{
+	border-top-width:1px;
+    padding: 3px .3em .2em 6px;	
+}
+a.btn_no_image {
+	padding: .4em 1em .4em 10px;
+	position:relative;
+}
+
+#page-wrapper input.btn,
+#page-wrapper a.btn {
+	margin:2px;
+	display:inline-block;
+	/*
+	display:block;
+	float:left;
+    */
+}
+
+.portlet {
+	margin:0 0em 1em 0;
+}
